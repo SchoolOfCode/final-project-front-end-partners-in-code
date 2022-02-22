@@ -33,6 +33,7 @@ ReactDOM.render(
   <ChakraProvider theme={theme}>
     <App />
   </ChakraProvider>,
+
   document.getElementById('root')
 );
 

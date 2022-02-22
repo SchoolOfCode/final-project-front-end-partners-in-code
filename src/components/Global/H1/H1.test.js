@@ -1,12 +1,14 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import H1 from "./H1";
+import React from 'react';
+import { render } from '@testing-library/react';
+import H1 from './H1';
+
+// TDD testing
 const testProps = {
-  text: "Reloved",
+  text: 'Reloved',
 };
-test("the h1 should render", () => {
+test('the h1 should render', () => {
   const { getByText } = render(<H1 {...testProps} />);
-  const actual = getByText("Reloved");
+  const actual = getByText('Reloved');
   expect(actual).toBeInTheDocument();
 });
 
