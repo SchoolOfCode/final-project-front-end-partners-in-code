@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 
 ReactDOM.render(
-  <ChakraProvider>
+  <ChakraProvide>
     <App />
-  </ChakraProvider>,
+  </ChakraProvide>,
   document.getElementById('root')
 );
 
