@@ -1,11 +1,20 @@
-import Item from "../Item/Item.js" 
+import Item from '../Item/Item.js';
+import items from '../../libs/items.js';
 
-export default function ListItem({items}) {
+export default function ListItem() {
   return (
     <div>
-    {items.map(function (item){
-        return <Item key={id} img= {img} alt={alt} title={title} location={location}></Item>
-    })}
+      {items.map(function (item) {
+        return (
+          <Item
+            key={item.itemId}
+            img={item.image.img}
+            alt={item.image.alt}
+            title={item.title}
+            location={item.location}
+          />
+        );
+      })}
     </div>
-  )
+  );
 }
