@@ -6,9 +6,12 @@ export default function Item({ img, alt, title, location }) {
     <div >
       <div className='box'>
         <img src={img} alt={alt} />
+      <p className='title'>{title}</p>
+      <p className='location'>{location}</p>
       </div>
-      <p>{title}</p>
-      <p>{location}</p>
+      
+     
+      
     </div>
   );
 }

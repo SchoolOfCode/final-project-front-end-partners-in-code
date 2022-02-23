@@ -9,13 +9,13 @@ export default function ItemsDisplay() {
         <div>
            <Logo/> 
         </div>
-        <div>
+        <div className="browse">
            <H1 text="Browse..."/> 
         </div>
         <div>
            <ListItem/> 
         </div> 
-        <div>
+        <div className="plus-button">
            <Button text="+"/> 
         </div>
     </div>

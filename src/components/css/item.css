@@ -1,5 +1,16 @@
+/* beige: '#fcefdb', //for popup additem background
+pink: '#e6998d', //for the buttons
+almostblack: '#37332f', //for the p tag texts
+olivegreen: '#767e65', //for the location text
+mintgreen: '#a4ccae', //for homepage buttons
+dustygreen: '#64847c', //for logo and header in popup additem */
+.browse{
+    text-align: left;
+    font-size: 1.3rem;
+    color: black;
+}
 .container{
-    width: 70%;
+    width: 50%;
     display:grid ;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -10,15 +21,41 @@
     margin: 5px auto;
 }
 .box{
-    width: 250px;
-    margin:0 10px;
-    box-shadow: 0 0 20px 2px rgba(0,0,.1);
-    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+    margin:40px 10px;
+    /* box-shadow: 0 0 20px 2px rgba(0,0,.1); */
+    /* border-radius: 20px; */
 }
 
 .box img {
     display: block;
     width: 100%;
-    border-radius: 20px;
+   /*  border-radius: 20px; */
     height: 100%;
+    text-align: center;
+}
+.title{
+    font-size: 1rem;
+    text-align: center;
+    color: #37332f;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.location{
+    font-size: 1rem;
+    text-align: center;
+    color:#767e65;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.plus-button{
+    background-color: #e6998d;
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 4px 2px;
+
 }
