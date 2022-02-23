@@ -1,7 +1,9 @@
 import Item from '../Item/Item.js';
-import items from '../../libs/items.js';
+
 import { Link } from "react-router-dom";
-export default function ListItem() {
+
+export default function ListItem({ items }) {
+
   return (
     <div className='container'>
       {items.map(function (item) {
