@@ -3,7 +3,7 @@ import items from '../../libs/items.js';
 
 export default function ListItem() {
   return (
-    <div>
+    <div className='container'>
       {items.map(function (item) {
         return (
           <Item
