@@ -4,6 +4,7 @@ import H1 from '../Global/H1/H1.js';
 import H2 from '../Global/H2/H2.js';
 import Button from '../Global/Button/Button.js';
 import AddItemPopUp from '../AddNewItem/AddNewItem.js';
+//import UploadImages from '../ImageUpload/ImageUpload.js';
 
 function Homepage() {
   return (
