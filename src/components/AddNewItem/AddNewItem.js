@@ -16,7 +16,10 @@ import {
   Textarea,
   Image,
   Box,
+  scrollBehavior,
 } from '@chakra-ui/react';
+import items from '../../libs/items.js';
+import UploadImages from '../ImageUpload/ImageUpload.js';
 
 export default function AddItemPopUp() {
   //sets the state for the modal (toggle)
@@ -35,15 +38,22 @@ export default function AddItemPopUp() {
         Open Modal
       </Button>
 
-      <Modal isOpen={isOpen} size={size} onClose={onClose} isCentered>
+      <Modal
+        isOpen={isOpen}
+        size={size}
+        onClose={onClose}
+        isCentered
+        //scrollBehavior={outside}
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Add product</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box boxSize="sm">
-              <Image src={Logo} alt="Logo" />
-            </Box>
+            {/* <Box boxSize="100px" objectFit="cover">
+              <Image src={Logo} alt="Logo" onClick={items[0].image.img} />
+            </Box> */}
+            <UploadImages />
             <FormControl>
               <FormLabel>Product Name</FormLabel>
               <Input placeholder="name your product!" />
