@@ -1,3 +1,4 @@
+
 import Logo from '../Global/Logo/Logo.js';
 import H1 from '../Global/H1/H1.js';
 import Button from '../Global/Button/Button.js';
@@ -18,6 +19,7 @@ export default function ItemsDisplay({ items }) {
       <div>
         <Button text="+" />
       </div>
+
     </div>
   );
 }
