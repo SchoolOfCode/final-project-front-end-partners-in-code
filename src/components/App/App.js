@@ -1,10 +1,10 @@
 import './App.css';
 import Homepage from '../Homepage/Homepage.js';
-
 import ContactPage from '../ContactPage/ContactPage';
-import { Routes, Route, Link } from 'react-router-dom';
 
+import { Routes, Route, Link } from 'react-router-dom';
 import React, { useState } from 'react';
+
 import Logo from '../Global/Logo/LogoImage.png';
 import {
   Modal,
@@ -26,8 +26,45 @@ import {
 
 import ItemsDisplay from '../ItemsDisplay/ItemsDisplay.js';
 import items from '../../libs/items.js';
+import InputField from '../Global/InputField/InputField.js';
 
 function App() {
+  const [newProductName, setProductName] = useState('');
+  const [newProductLocation, setProductLocation] = useState('');
+  const [newProductCondition, setProductCondition] = useState('');
+  const [newProductDescription, setProductDescription] = useState('');
+  const [updatedListItems, setupdatedListItems] = useState(items);
+
+  //const handleNameChange = (event) => setProductName(event.target.value);
+
+  function handleNameChange(userInput) {
+    setProductName(userInput.target.value);
+    console.log(newProductName);
+  }
+
+  const handleLocationChange = (event) =>
+    setProductLocation(event.target.value);
+  const handleConditionChange = (event) =>
+    setProductCondition(event.target.value);
+  const handleDescriptionChange = (event) =>
+    setProductDescription(event.target.value);
+
+  function handleClick() {
+    setupdatedListItems([
+      {
+        itemId: 13,
+        title: newProductName,
+        location: newProductLocation,
+        image: {
+          img: '',
+          alt: newProductName,
+        },
+      },
+      ...items,
+    ]);
+    console.log(updatedListItems);
+  }
+
   function AddItemPopUp() {
     //sets the state for the modal (toggle)
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -38,29 +75,6 @@ function App() {
       setSize(newSize);
       onOpen();
     };
-
-    const [newProductName, setProductName] = useState('');
-    const [newProductLocation, setProductLocation] = useState('');
-    const [newProductCondition, setProductCondition] = useState('');
-    const [newProductDescription, setProductDescription] = useState('');
-    const [updatedListItems, setupdatedListItems] = useState('');
-
-    const handleChange = (event) => setProductName(event.target.value);
-
-    function handleClick() {
-      setupdatedListItems([
-        {
-          itemId: 13,
-          title: newProductName,
-          location: newProductLocation,
-          image: {
-            img: '',
-            alt: newProductName,
-          },
-        },
-        ...items,
-      ]);
-    }
 
     return (
       <>
@@ -79,25 +93,37 @@ function App() {
               </Box>
               <FormControl>
                 <FormLabel>Product Name</FormLabel>
-                <Input
-                  placeholder="name your product!"
+                <InputField
+                  placeholder="Name of Your Product"
                   value={newProductName}
-                  onChange={handleChange}
+                  onChange={handleNameChange}
                 />
               </FormControl>
 
               <FormControl mt={4}>
                 <FormLabel>Location</FormLabel>
-                <Input placeholder="Where is the item located?" />
+                <InputField
+                  placeholder="Product Location"
+                  value={newProductLocation}
+                  onChange={handleLocationChange}
+                />
               </FormControl>
               <FormControl mt={4}>
                 <FormLabel>Condition</FormLabel>
-                <Input placeholder="condition of the item" />
+                <InputField
+                  placeholder="Product Condition"
+                  value={newProductCondition}
+                  onChange={handleConditionChange}
+                />
               </FormControl>
 
               <FormControl mt={4}>
                 <FormLabel>Description</FormLabel>
-                <Textarea placeholder="Please describe your what your giving!" />
+                <Textarea
+                  placeholder="Please, Describe Your Product"
+                  value={newProductDescription}
+                  onChange={handleDescriptionChange}
+                />
               </FormControl>
             </ModalBody>
 
@@ -117,14 +143,16 @@ function App() {
 
   return (
     <div className="App">
+      <AddItemPopUp />
+      <ItemsDisplay items={updatedListItems} />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/newitems" element={<AddItemPopUp />} />
-        <Route
+        {/* <Route
           path="/items"
           element={<ItemsDisplay items={updatedListItems} />}
-        />
+        /> */}
       </Routes>
     </div>
   );
