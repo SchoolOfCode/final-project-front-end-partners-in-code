@@ -91,7 +91,7 @@ dustygreen: '#64847c', //for logo and header in popup additem */
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size:medium;
 }
 .location{
     margin-top: 10px;
@@ -101,7 +101,7 @@ dustygreen: '#64847c', //for logo and header in popup additem */
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
+    font-size:medium;
 }
 .plus-button{
     background-color: #e6998d;
