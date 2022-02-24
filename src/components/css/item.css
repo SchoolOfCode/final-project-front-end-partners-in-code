@@ -9,13 +9,15 @@ dustygreen: '#64847c', //for logo and header in popup additem */
 .responsive-container {
 	max-width: 1080px;
 	width: 100%;
+    height: 100%;
 	margin-left: auto;
 	margin-right: auto;
     
     
+    
 }
 .display-container{
-    max-width: 1080px;
+    
 	width: 100%;
     margin-left: auto;
 	margin-right: auto;
@@ -25,19 +27,25 @@ dustygreen: '#64847c', //for logo and header in popup additem */
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
+    
 }
+
 .browse{
     text-align: left;
     font-size: 2rem;
-    color: black;
+    color:#37332f;
+    font-weight: 900;
     width: 100%;
     margin: 20px 0px 0px 30px;
+    font-family: 'Abril Fatface', cursive;
 }
 .container{
     max-width: 100%;
     width: 70% ;
     display:grid ;
     grid-template-columns: repeat(2, 1fr);
+    
     grid-gap: 3rem;
     flex-direction: column;
     justify-content: center;
@@ -50,13 +58,18 @@ dustygreen: '#64847c', //for logo and header in popup additem */
     flex-direction: column; 
     align-items: center;
     max-height: max-content;
-  
+    
 }
 
 .box img {
+    width: 100%;
+    height:100%;
+   
+}
+
+.logo {
     
-    max-width: ;
-    max-height: 300px;
+    max-width: 100px;
 }
 .product-content {
 	padding: 1rem;
@@ -66,31 +79,34 @@ dustygreen: '#64847c', //for logo and header in popup additem */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color:rgba(255, 255, 255, 0.5); 
     flex-direction: column;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.5);
 }
 .title{
     margin-top: 10px;
     font-size: 1rem;
     text-align: center;
     color: #37332f;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
+    font-size: 1.5rem;
 }
 .location{
     margin-top: 10px;
     font-size: 1rem;
     text-align:center;
     color:#767e65;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
 }
 .plus-button{
     background-color: #e6998d;
     border-radius: 50%;
-    color: white;
+    color: black;
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -98,6 +114,8 @@ dustygreen: '#64847c', //for logo and header in popup additem */
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    position:relative;
+    left:80%;
 
 }
 

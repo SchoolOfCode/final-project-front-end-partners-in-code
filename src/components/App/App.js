@@ -26,7 +26,7 @@ function App() {
       <AddItemPopUp onAddNewItem={handleClick} />
       <ItemsDisplay items={updatedListItems} />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+       {/*  <Route path="/" element={<Homepage />} /> */}
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/newitems" element={<AddItemPopUp />} />
       </Routes>
