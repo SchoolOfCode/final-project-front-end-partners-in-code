@@ -1,0 +1,33 @@
+.box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: max-content;
+  }
+
+  .productContent {
+    padding: 1rem;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .location {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #767e65;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+  }
+  

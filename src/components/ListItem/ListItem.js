@@ -1,11 +1,11 @@
 import Item from '../Item/Item.js';
-
+import css from './ListItem.module.css';
 export default function ListItem({ items }) {
   return (
-    <div className="container">
+    <div className={css.container}>
       {items.map(function (item) {
         return (
-          <div className="responsive-container">
+          <div className={css.responsiveContainer}>
             <Item
               key={item.itemId}
               img={item.image.img}

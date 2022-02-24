@@ -1,15 +1,15 @@
 import Logo from '../Global/Logo/Logo.js';
 import H1 from '../Global/H1/H1.js';
-import AddNewItem from '../AddNewItem/AddNewItem.js';
+import AddNewItem from "../AddNewItem/AddNewItem.js"
 import ListItem from '../ListItem/ListItem.js';
-
+import ImageUplooad from "../ImageUpload/ImageUpload.js"
 import css from './ItemsDisplay.module.css';
 
 export default function ItemsDisplay({ items, onAddNewItem }) {
   return (
     <div className={css.displayContainer}>
-      <AddNewItem onAddNewItem={onAddNewItem} />
-      <div className="box">
+
+      <div className={css.box}>
         <Logo />
       </div>
       <div className={css.browse}>
@@ -20,7 +20,7 @@ export default function ItemsDisplay({ items, onAddNewItem }) {
       </div>
 
       <div className={css.plusButton}>
-        <AddNewItem className="plus-button" />
+        <AddNewItem onAddNewItem={onAddNewItem} className={css.plusButton} />
       </div>
     </div>
   );
