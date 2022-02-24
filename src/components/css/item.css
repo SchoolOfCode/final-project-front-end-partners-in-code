@@ -73,24 +73,6 @@ body: 'Montserrat, sans-serif',
   font-size: medium;
 }
 
-.display-container {
-  width: 80%;
-  margin: 10px auto;
-  background-repeat: no-repeat;
-  background-image: url('https://images.unsplash.com/photo-1565419672978-6ba05e8859d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=377&q=80');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-radius: 2rem;
-}
-.browse {
-  text-align: left;
-  font-size: 2rem;
-  color: black;
-  width: 100%;
-  margin: 20px 0px 0px 30px;
-}
 .container {
   width: 50%;
   display: grid;
@@ -119,26 +101,10 @@ body: 'Montserrat, sans-serif',
   height: 100%;
   text-align: center;
 }
-.title {
-  font-size: 1rem;
-  text-align: center;
-  color: #37332f;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 .location {
   font-size: 1rem;
   text-align: center;
   color: #767e65;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.plus-button {
-  background-color: #e6998d;
-  border-radius: 50%;
-  color: white;
-  padding: 20px;
-  text-align: right;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 2rem;
-  margin: 4px 2px;
 }
