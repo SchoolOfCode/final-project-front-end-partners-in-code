@@ -1,0 +1,47 @@
+.displayContainer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background: url(../bg-images//shadow.jpeg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.browse {
+  text-align: left;
+  font-size: 2rem;
+  color: #37332f;
+  font-weight: 900;
+  width: 100%;
+  margin: 20px 0px 0px 30px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: #37332f;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+
+.plusButton {
+  background-color: #e6998d;
+  border-radius: 50%;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  left: 80%;
+}
