@@ -3,9 +3,11 @@ import React from 'react';
 
 export default function Item({ img, alt, title, location }) {
   return (
-    <div >
-      <div className='box'>
-        <img src={img} alt={alt} />
+    <div className='box' >
+      
+      <img src={img} alt={alt} />
+      <div class="product-content">
+        
       <p className='title'>{title}</p>
       <p className='location'>{location}</p>
       </div>

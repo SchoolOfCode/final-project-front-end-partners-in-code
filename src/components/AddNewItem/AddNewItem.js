@@ -92,6 +92,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   return (
     <>
 
+
       <Button
         onClick={() => {
           handleSizeClick(size);
@@ -100,6 +101,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
         }}
         key={size}
       >
+
         +
       </Button>
 

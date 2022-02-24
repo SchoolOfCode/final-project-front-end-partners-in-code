@@ -1,13 +1,24 @@
 import Item from '../Item/Item.js';
 
-import { Link } from 'react-router-dom';
+
 
 export default function ListItem({ items }) {
   return (
     <div className="container">
       {items.map(function (item) {
         return (
-          <Link to="/contact">
+
+        
+            <div className='responsive-container'> <Item
+            key={item.itemId}
+            img={item.image.img}
+            alt={item.image.alt}
+            title={item.title}
+            location={item.location}
+          /></div>
+         
+         
+
             <Item
               key={item.itemId}
               img={item.image.img}
@@ -15,7 +26,8 @@ export default function ListItem({ items }) {
               title={item.title}
               location={item.location}
             />
-          </Link>
+    
+
         );
       })}
     </div>
