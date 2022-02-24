@@ -80,7 +80,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   return (
     <>
       <Button onClick={() => handleSizeClick(size)} key={size}>
-        Open Modal
+        +
       </Button>
 
       <Modal
