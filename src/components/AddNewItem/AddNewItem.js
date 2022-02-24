@@ -148,7 +148,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
             >
               Add Item
             </Button>
-            <Button>Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
