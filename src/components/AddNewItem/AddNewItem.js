@@ -76,9 +76,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
           <ModalHeader>Add product</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            {/* <Box boxSize="100px" objectFit="cover">
-              <Image src={Logo} alt="Logo" onClick={items[0].image.img} />
-            </Box> */}
             <UploadImages />
             <FormControl>
               <FormLabel>Product Name</FormLabel>
@@ -129,7 +126,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
             >
               Add Item
             </Button>
-            <Button>Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
