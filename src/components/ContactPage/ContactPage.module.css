@@ -1,0 +1,13 @@
+.contactContainer {
+  background: url(../bg-images//shadow.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* #root {
+  margin: 0;
+  padding: 0;
+} */
