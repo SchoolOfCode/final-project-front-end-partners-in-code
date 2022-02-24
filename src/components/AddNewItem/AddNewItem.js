@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import colors from '../../index';
 
 import {
   Modal,
@@ -91,8 +92,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //above this testing backdrop
   return (
     <>
-
-
       <Button
         onClick={() => {
           handleSizeClick(size);
@@ -100,8 +99,10 @@ export default function AddItemPopUp({ onAddNewItem }) {
           onOpen(); //runs overlay once on open (prevents loop)
         }}
         key={size}
+        colorScheme="black"
+        variant="ghost"
+        fontSize="40px"
       >
-
         +
       </Button>
 
@@ -117,7 +118,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
         <ModalContent>
           <ModalHeader>Add product</ModalHeader>
           <ModalCloseButton />
-          <ModalBody> 
+          <ModalBody>
             <UploadImages onImageChange={onImageChange} imageURLs={imageURLs} />
 
             <FormControl>
