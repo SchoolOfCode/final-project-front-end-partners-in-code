@@ -58,9 +58,28 @@ export default function AddItemPopUp({ onAddNewItem }) {
     onOpen();
   };
 
+  //testing backdrop
+  // function BackdropExample() {
+  const OverlayOne = () => (
+    <ModalOverlay
+      bg="none"
+      backdropFilter="auto"
+      backdropInvert="40%"
+      backdropBlur="2px"
+    />
+  );
+  const [overlay, setOverlay] = React.useState(<OverlayOne />);
+  //above this testing backdrop
   return (
     <>
-      <Button onClick={() => handleSizeClick(size)} key={size}>
+      <Button
+        onClick={() => {
+          handleSizeClick(size);
+          setOverlay(<OverlayOne />); //sets overlay
+          onOpen(); //runs overlay once on open (prevents loop)
+        }}
+        key={size}
+      >
         Open Modal
       </Button>
 
@@ -71,7 +90,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
         isCentered
         //scrollBehavior={outside}
       >
-        <ModalOverlay />
+        {overlay}
+
         <ModalContent>
           <ModalHeader>Add product</ModalHeader>
           <ModalCloseButton />
@@ -106,9 +126,11 @@ export default function AddItemPopUp({ onAddNewItem }) {
             <FormControl mt={4}>
               <FormLabel>Description</FormLabel>
               <Textarea
+                // to be used in the future
                 placeholder="Please, Describe Your Product"
                 value={newProductDescription}
                 onChange={handleDescriptionChange}
+                //unused above this line to next breaker
               />
             </FormControl>
           </ModalBody>
