@@ -6,20 +6,21 @@ import ListItem from '../ListItem/ListItem.js';
 
 export default function ItemsDisplay({ items }) {
   return (
-    <div>
-      <div>
+    <div className='display-container'>
+      <div className='box'>
         <Logo />
       </div>
-      <div>
+      <div className='browse'>
         <H1 text="Browse..." />
       </div>
-      <div>
+      <div></div>
+      <div className='title'>
         <ListItem items={items} />
       </div>
-      <div>
+      <div className='plus-button'>
         <Button text="+" />
       </div>
-
+     
     </div>
   );
 }

@@ -1,7 +1,6 @@
-import './App.css';
 import Homepage from '../Homepage/Homepage.js';
 import ContactPage from '../ContactPage/ContactPage';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "../css/app.css"; 
 import React, { useState } from 'react';
 
