@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Logo from '../Global/Logo/LogoImage.png';
+import React, { useState, useEffect } from 'react';
+
 import {
   Modal,
   ModalOverlay,
@@ -18,7 +18,7 @@ import {
   Box,
   scrollBehavior,
 } from '@chakra-ui/react';
-import items from '../../libs/items.js';
+
 import UploadImages from '../ImageUpload/ImageUpload.js';
 
 export default function AddItemPopUp({ onAddNewItem }) {
@@ -37,13 +37,32 @@ export default function AddItemPopUp({ onAddNewItem }) {
   const handleDescriptionChange = (event) =>
     setProductDescription(event.target.value);
 
+  //states for allowing image upload and rendering images in the application
+  const [images, setImages] = useState([]);
+  const [imageURLs, setImageURLs] = useState([]);
+
+  //use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
+  useEffect(() => {
+    if (images.length < 1) return;
+    const newImageUrls = [];
+    //if there are images within bounds, start adding them to a temporary array to collect those URL strings
+    images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
+    //Please note, on page reload or on re-render these strings will have to be re-built
+    setImageURLs(newImageUrls);
+  }, [images]);
+
+  // access the files through the event object and then store them in our state
+  function onImageChange(e) {
+    setImages([...e.target.files]);
+  }
+
   //this variable handles the structure(template) of our object item
   const newItem = {
     itemId: 13,
     title: newProductName,
     location: newProductLocation,
     image: {
-      img: '',
+      img: imageURLs,
       alt: newProductName,
     },
   };
@@ -72,6 +91,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //above this testing backdrop
   return (
     <>
+
+
       <Button
         onClick={() => {
           handleSizeClick(size);
@@ -80,7 +101,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
         }}
         key={size}
       >
-        Open Modal
+
+        +
       </Button>
 
       <Modal
@@ -95,8 +117,9 @@ export default function AddItemPopUp({ onAddNewItem }) {
         <ModalContent>
           <ModalHeader>Add product</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <UploadImages />
+          <ModalBody> 
+            <UploadImages onImageChange={onImageChange} imageURLs={imageURLs} />
+
             <FormControl>
               <FormLabel>Product Name</FormLabel>
               <Input
