@@ -5,20 +5,34 @@ import H2 from '../Global/H2/H2.js';
 import Button from '../Global/Button/Button.js';
 import { Link } from 'react-router-dom';
 
+import css from './Homepage.module.css'
+
 function Homepage() {
   return (
     <div>
-      <Logo />
+      <div className={css.logo}>
+        <Logo />
+      </div>
       <Button text="Log In" />
       <Button text="Sign Up" />
+      <div className={css.h1}>
       <H1 text="Exchange and Share" />
+      </div>
+      <div className={css.h2}>
       <H2 text="Give new life to objects, share what you have, love what others have loved." />
+      </div>
+      <div className={css.greenButtons}>
       <Link to="items">
+      <div className={css.giveButton}>
         <Button text="+ Give" />
+        </div>
       </Link>
       <Link to="items">
+      <div className={css.browseButton}>
         <Button text="Browse >>" />
+        </div>
       </Link>
+      </div>
     </div>
   );
 }
