@@ -18,13 +18,18 @@
 }
 p {
   font-family: 'Abril Fatface', sans-serif;
-  font-size: 16px;
+  font-size: 10px;
 }
 @media screen and (min-width: 320px) {
   p {
-    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (26 - 10) * ((100vw - 300px) / (1600 - 300)));
   }
 }
+
+/* .contactPageLogo {
+  min-width: 20vw;
+  max-width: 25vw;
+} */
 
 /* #root {
   margin: 0;
