@@ -23,8 +23,8 @@ const colors = {
 
 const fonts = {
   font: {
-    heading: 'Abril Fatface, sans-serif',
-    body: 'Montserrat, sans-serif',
+    heading: 'Abril Fatface',
+    body: 'Montserrat',
   },
 };
 
