@@ -1,26 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
+
 .displayContainer {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   background-repeat: no-repeat;
   background: url(../bg-images//shadow.jpeg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  /* background: url(../bg-images//shadow.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh; */
+  background-attachment: fixed;
 }
 
 .browse {
-  text-align: left;
+  text-align: center;
   font-size: 2rem;
-  color: #37332f;
+  color: #fcefdb;
   font-weight: 900;
   width: 100%;
-  margin: 20px 0px 0px 30px;
+  margin: 0px 0px 0px 0px;
   font-family: 'Abril Fatface', cursive;
 }
 
-.title {
+/* .listItemContainer {
   margin-top: 10px;
   font-size: 1rem;
   text-align: center;
@@ -28,20 +38,60 @@
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: medium;
+  font-weight: 400;
+} */
+
+.listItemContainer {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 950px;
 }
 
-.plusButton {
+.itemDisplayContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* .plusButton {
   background-color: #e6998d;
-  border-radius: 50%;
+  border-radius: 50px;
   color: black;
   padding: 20px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
   position: relative;
   left: 80%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+} */
+
+.box {
+  position: relative;
+  max-width: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  left: 80%;
+  margin-right: 50px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.plusButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
