@@ -46,9 +46,7 @@ body: 'Montserrat, sans-serif',
   height: 100%;
 }
 
-.logo {
-  max-width: 100px;
-}
+
 .product-content {
   padding: 1rem;
   border-left: 1px solid #dedede;
