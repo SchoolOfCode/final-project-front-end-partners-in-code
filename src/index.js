@@ -28,7 +28,7 @@ const fonts = {
   },
 };
 
-const theme = extendTheme({ colors, fonts });
+export const theme = extendTheme({ colors, fonts });
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>

@@ -19,9 +19,9 @@ export default function ItemsDisplay({ items, onAddNewItem }) {
         </div>
       </div>
       <div className={css.buttonContainer}>
-      <div className={css.plusButton}>
-        <AddNewItem onAddNewItem={onAddNewItem} bg="colors.color.pink" />
-      </div>
+        <div className={css.plusButton}>
+          <AddNewItem onAddNewItem={onAddNewItem} />
+        </div>
       </div>
     </div>
   );

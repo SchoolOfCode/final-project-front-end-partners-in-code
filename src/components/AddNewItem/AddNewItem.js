@@ -102,7 +102,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
         color="black"
         variant="ghost"
         fontSize="40px"
-        bg="#e6998d"
+        bgColor="color.pink"
         borderRadius="50"
         size="lg"
         justifyContent="center"
