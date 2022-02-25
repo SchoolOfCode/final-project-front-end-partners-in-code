@@ -136,13 +136,10 @@ export default function AddItemPopUp({ onAddNewItem }) {
           </ModalHeader>
           {/* modal close button  */}
           <ModalCloseButton />
-<<<<<<< HEAD
-          <ModalBody>
-=======
+
           {/* Modal body */}
           <ModalBody>
             {/* Upload images button */}
->>>>>>> origin/modalStyle
             <UploadImages onImageChange={onImageChange} imageURLs={imageURLs} />
             {/* product name input  */}
             <FormControl>
