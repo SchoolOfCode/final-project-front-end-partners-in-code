@@ -31,7 +31,7 @@
   font-family: 'Abril Fatface', cursive;
 }
 
-.listItemContainer {
+/* .listItemContainer {
   margin-top: 10px;
   font-size: 1rem;
   text-align: center;
@@ -42,6 +42,10 @@
   justify-content: center;
   font-size: medium;
   font-weight: 400;
+} */
+
+.listItemContainer {
+  background-color: white;
 }
 
 .itemDisplayContainer {
@@ -49,7 +53,7 @@
   justify-content: center;
 }
 
-.plusButton {
+/* .plusButton {
   background-color: #e6998d;
   border-radius: 50px;
   color: black;
@@ -65,11 +69,24 @@
   width: 60px;
   display: flex;
   justify-content: center;
-}
+} */
 
 .box {
   position: relative;
   max-width: 100px;
   width: 100%;
   height: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  left: 80%;
+}
+
+.plusButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }

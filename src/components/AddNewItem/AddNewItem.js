@@ -99,9 +99,17 @@ export default function AddItemPopUp({ onAddNewItem }) {
           onOpen(); //runs overlay once on open (prevents loop)
         }}
         key={size}
-        colorScheme="black"
+        color="black"
         variant="ghost"
         fontSize="40px"
+        bg="#e6998d"
+        borderRadius="50"
+        size="lg"
+        justifyContent="center"
+        display="flex"
+        alignItems="center"
+        textAlign="center"
+        padding="30px"
       >
         +
       </Button>

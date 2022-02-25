@@ -18,8 +18,10 @@ export default function ItemsDisplay({ items, onAddNewItem }) {
           <ListItem items={items} />
         </div>
       </div>
+      <div className={css.buttonContainer}>
       <div className={css.plusButton}>
-        <AddNewItem onAddNewItem={onAddNewItem} />
+        <AddNewItem onAddNewItem={onAddNewItem} bg="colors.color.pink" />
+      </div>
       </div>
     </div>
   );
