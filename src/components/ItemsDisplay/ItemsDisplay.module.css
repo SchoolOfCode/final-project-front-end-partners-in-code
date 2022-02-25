@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap');
 
 .displayContainer {
-  /* width: 100%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
-  /* background: url(../bg-images//shadow.jpeg); */
+  background: url(../bg-images//shadow.jpeg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  /* background-size: cover; */
+  background-size: cover;
 
-  background: url(../bg-images//shadow.jpeg);
+  /* background: url(../bg-images//shadow.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100vw;
-  height: 100vh;
-  /* background-attachment: fixed; */
+  height: 100vh; */
+  background-attachment: fixed;
 }
 
 .browse {
@@ -27,7 +27,7 @@
   color: #37332f;
   font-weight: 900;
   width: 100%;
-  margin: 20px 0px 0px 30px;
+  margin: 0px 0px 0px 0px;
   font-family: 'Abril Fatface', cursive;
 }
 
