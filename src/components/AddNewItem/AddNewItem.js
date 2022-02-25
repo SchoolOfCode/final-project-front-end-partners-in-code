@@ -17,6 +17,7 @@ import {
   Image,
   Box,
   scrollBehavior,
+  // extendTheme,
 } from '@chakra-ui/react';
 
 import UploadImages from '../ImageUpload/ImageUpload.js';
@@ -91,8 +92,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //above this testing backdrop
   return (
     <>
-
-
       <Button
         onClick={() => {
           handleSizeClick(size);
@@ -101,10 +100,10 @@ export default function AddItemPopUp({ onAddNewItem }) {
         }}
         key={size}
       >
-
         +
       </Button>
 
+      {/* MODAL START */}
       <Modal
         isOpen={isOpen}
         size={size}
@@ -114,38 +113,52 @@ export default function AddItemPopUp({ onAddNewItem }) {
       >
         {overlay}
 
-        <ModalContent>
-          <ModalHeader>Add product</ModalHeader>
+        <ModalContent bgColor="color.beige">
+          <ModalHeader
+            fontFamily="font.heading"
+            bgColor="color.dustygreen"
+            color="white"
+            textAlign="center"
+          >
+            Add product
+          </ModalHeader>
+          {/* modal close button  */}
           <ModalCloseButton />
-          <ModalBody> 
+          {/* Modal body */}
+          <ModalBody>
+            {/* Upload images button */}
             <UploadImages onImageChange={onImageChange} imageURLs={imageURLs} />
-
+            {/* product name input  */}
             <FormControl>
               <FormLabel>Product Name</FormLabel>
               <Input
                 placeholder="Name of Your Product"
                 value={newProductName}
                 onChange={handleNameChange}
+                bgColor="white"
               />
             </FormControl>
-
+            {/* product location input */}
             <FormControl mt={4}>
               <FormLabel>Location</FormLabel>
               <Input
                 placeholder="Product Location"
                 value={newProductLocation}
                 onChange={handleLocationChange}
+                bgColor="white"
               />
             </FormControl>
+            {/* product condition input */}
             <FormControl mt={4}>
               <FormLabel>Condition</FormLabel>
               <Input
                 placeholder="Product Condition"
                 value={newProductCondition}
                 onChange={handleConditionChange}
+                bgColor="white"
               />
             </FormControl>
-
+            {/* product description input */}
             <FormControl mt={4}>
               <FormLabel>Description</FormLabel>
               <Textarea
@@ -153,12 +166,14 @@ export default function AddItemPopUp({ onAddNewItem }) {
                 placeholder="Please, Describe Your Product"
                 value={newProductDescription}
                 onChange={handleDescriptionChange}
+                bgColor="white"
                 //unused above this line to next breaker
               />
             </FormControl>
           </ModalBody>
-
+          {/* Lower area of model (buttons) */}
           <ModalFooter>
+            {/* add item button */}
             <Button
               colorScheme="blue"
               mr={3}
