@@ -2,8 +2,7 @@
 
 .displayContainer {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   background-repeat: no-repeat;
   background: url(../bg-images//shadow.jpeg);
   -webkit-background-size: cover;
@@ -83,6 +82,11 @@
   justify-content: flex-end;
   align-items: flex-end;
   left: 80%;
+  margin-right: 50px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
 
 .plusButton {
