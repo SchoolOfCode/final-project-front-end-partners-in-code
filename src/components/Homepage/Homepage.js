@@ -9,13 +9,13 @@ import css from './Homepage.module.css';
 
 function Homepage() {
   return (
-    <div classname={css.homepageContainer}>
+    <div className={css.homepageContainer}>
       <div className={css.logoContainer}>
-      <div className={css.logoItem}>
-      <div className={css.logo}>
-        <Logo />
-      </div>
-      </div>
+        <div className={css.logoItem}>
+          <div className={css.logo}>
+            <Logo />
+          </div>
+        </div>
         <div className={css.pinkButtons}>
           <div className={css.logInButton}>
             <Button text="Log In" />
