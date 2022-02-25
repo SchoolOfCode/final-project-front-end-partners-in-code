@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
 .displayContainer {
   width: 100%;
@@ -31,7 +31,7 @@
   font-family: 'Abril Fatface', cursive;
 }
 
-.title {
+.listItemContainer {
   margin-top: 10px;
   font-size: 1rem;
   text-align: center;
@@ -39,40 +39,37 @@
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: medium;
   font-weight: 400;
 }
 
+.itemDisplayContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .plusButton {
   background-color: #e6998d;
-  border-radius: 50%;
+  border-radius: 50px;
   color: black;
   padding: 20px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
   position: relative;
   left: 80%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
 }
+
 .box {
-  /* position: relative;
-  width: 100px;
-  height: 100px; */
   position: relative;
-  /* justify-content: left; */
   max-width: 100px;
   width: 100%;
   height: 100%;
 }
-
-/* .box img {
-  position: absolute;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-} */
