@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
 .logo {
+  display: flex;
+  justify-content: left;
   max-width: 100px;
   width: 100%;
   height: 100%;
@@ -39,6 +41,11 @@
   padding-left: 10px;
   padding-right: 10px;
   width: 115px;
+  margin-left: 20px;
+}
+
+.giveButton {
+  margin-right: 20px;
 }
 
 .greenButtons {
@@ -56,3 +63,53 @@ p {
   font-weight: 400;
   margin: 20px;
 }
+
+.homepageContainer{
+  background: url("../../../public/bg-images/clothes.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logInButton, .signUpButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.logInButton {
+  text-decoration: underline;
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  border: solid 1px #e6998d;
+  display: flex;
+  justify-content: center;
+}
+
+.pinkButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.logoItem {
+display: flex;
+justify-content: flex-start;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
