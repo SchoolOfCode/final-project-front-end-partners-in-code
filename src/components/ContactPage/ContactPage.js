@@ -9,11 +9,12 @@ export default function ContactPage({ phone, email }) {
   return (
     <div className={css.contactContainer}>
       <Link to="/items">
-        <Button text={<VscArrowLeft />} />
+        <Button text="Back to Browse" />
       </Link>
-
-      <p>{items[0].phone}</p>
-      <p>{items[0].email}</p>
+      <div className={css.informationContainer}>
+        <p>{items[0].phone}</p>
+        <p>{items[0].email}</p>
+      </div>
     </div>
   );
 }
