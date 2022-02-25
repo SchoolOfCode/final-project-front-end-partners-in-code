@@ -1,14 +1,9 @@
-import './App.css';
 import Homepage from '../Homepage/Homepage.js';
 import ContactPage from '../ContactPage/ContactPage';
-import { Routes, Route, Link } from "react-router-dom";
-import "../css/app.css"; 
+import { Routes, Route, Link } from 'react-router-dom';
 import React, { useState } from 'react';
-
-
 import ItemsDisplay from '../ItemsDisplay/ItemsDisplay.js';
 import items from '../../libs/items.js';
-
 import AddItemPopUp from '../AddNewItem/AddNewItem';
 
 function App() {
@@ -24,12 +19,15 @@ function App() {
 
   return (
     <div className="App">
-      <AddItemPopUp onAddNewItem={handleClick} />
-      <ItemsDisplay items={updatedListItems} />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/newitems" element={<AddItemPopUp />} />
+        <Route
+          path="/items"
+          element={
+            <ItemsDisplay items={updatedListItems} onAddNewItem={handleClick} />
+          }
+        />
       </Routes>
     </div>
   );

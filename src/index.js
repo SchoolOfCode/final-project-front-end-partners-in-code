@@ -23,12 +23,12 @@ const colors = {
 
 const fonts = {
   font: {
-    heading: 'Abril Fatface, sans-serif',
-    body: 'Montserrat, sans-serif',
+    heading: 'Abril Fatface',
+    body: 'Montserrat',
   },
 };
 
-const theme = extendTheme({ colors, fonts });
+export const theme = extendTheme({ colors, fonts });
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>

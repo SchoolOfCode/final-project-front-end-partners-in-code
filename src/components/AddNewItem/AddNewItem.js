@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import Logo from '../Global/Logo/LogoImage.png';
+import React, { useState, useEffect } from 'react';
+import colors from '../../index';
+
 import {
   Modal,
   ModalOverlay,
@@ -17,8 +18,9 @@ import {
   Image,
   Box,
   scrollBehavior,
+  // extendTheme,
 } from '@chakra-ui/react';
-import items from '../../libs/items.js';
+
 import UploadImages from '../ImageUpload/ImageUpload.js';
 
 export default function AddItemPopUp({ onAddNewItem }) {
@@ -37,13 +39,32 @@ export default function AddItemPopUp({ onAddNewItem }) {
   const handleDescriptionChange = (event) =>
     setProductDescription(event.target.value);
 
+  //states for allowing image upload and rendering images in the application
+  const [images, setImages] = useState([]);
+  const [imageURLs, setImageURLs] = useState([]);
+
+  //use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
+  useEffect(() => {
+    if (images.length < 1) return;
+    const newImageUrls = [];
+    //if there are images within bounds, start adding them to a temporary array to collect those URL strings
+    images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
+    //Please note, on page reload or on re-render these strings will have to be re-built
+    setImageURLs(newImageUrls);
+  }, [images]);
+
+  // access the files through the event object and then store them in our state
+  function onImageChange(e) {
+    setImages([...e.target.files]);
+  }
+
   //this variable handles the structure(template) of our object item
   const newItem = {
     itemId: 13,
     title: newProductName,
     location: newProductLocation,
     image: {
-      img: '',
+      img: imageURLs,
       alt: newProductName,
     },
   };
@@ -58,12 +79,43 @@ export default function AddItemPopUp({ onAddNewItem }) {
     onOpen();
   };
 
+  //testing backdrop
+  // function BackdropExample() {
+  const OverlayOne = () => (
+    <ModalOverlay
+      bg="none"
+      backdropFilter="auto"
+      backdropInvert="40%"
+      backdropBlur="2px"
+    />
+  );
+  const [overlay, setOverlay] = React.useState(<OverlayOne />);
+  //above this testing backdrop
   return (
     <>
-      <Button onClick={() => handleSizeClick(size)} key={size}>
-        Open Modal
+      <Button
+        onClick={() => {
+          handleSizeClick(size);
+          setOverlay(<OverlayOne />); //sets overlay
+          onOpen(); //runs overlay once on open (prevents loop)
+        }}
+        key={size}
+        color="black"
+        variant="ghost"
+        fontSize="40px"
+        bgColor="color.pink"
+        borderRadius="50"
+        size="lg"
+        justifyContent="center"
+        display="flex"
+        alignItems="center"
+        textAlign="center"
+        padding="30px"
+      >
+        +
       </Button>
 
+      {/* MODAL START */}
       <Modal
         isOpen={isOpen}
         size={size}
@@ -71,52 +123,70 @@ export default function AddItemPopUp({ onAddNewItem }) {
         isCentered
         //scrollBehavior={outside}
       >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Add product</ModalHeader>
+        {overlay}
+
+        <ModalContent bgColor="color.beige">
+          <ModalHeader
+            fontFamily="font.heading"
+            bgColor="color.dustygreen"
+            color="white"
+            textAlign="center"
+          >
+            Add product
+          </ModalHeader>
+          {/* modal close button  */}
           <ModalCloseButton />
+
+          {/* Modal body */}
           <ModalBody>
-            {/* <Box boxSize="100px" objectFit="cover">
-              <Image src={Logo} alt="Logo" onClick={items[0].image.img} />
-            </Box> */}
-            <UploadImages />
+            {/* Upload images button */}
+            <UploadImages onImageChange={onImageChange} imageURLs={imageURLs} />
+            {/* product name input  */}
             <FormControl>
               <FormLabel>Product Name</FormLabel>
               <Input
                 placeholder="Name of Your Product"
                 value={newProductName}
                 onChange={handleNameChange}
+                bgColor="white"
               />
             </FormControl>
-
+            {/* product location input */}
             <FormControl mt={4}>
               <FormLabel>Location</FormLabel>
               <Input
                 placeholder="Product Location"
                 value={newProductLocation}
                 onChange={handleLocationChange}
+                bgColor="white"
               />
             </FormControl>
+            {/* product condition input */}
             <FormControl mt={4}>
               <FormLabel>Condition</FormLabel>
               <Input
                 placeholder="Product Condition"
                 value={newProductCondition}
                 onChange={handleConditionChange}
+                bgColor="white"
               />
             </FormControl>
-
+            {/* product description input */}
             <FormControl mt={4}>
               <FormLabel>Description</FormLabel>
               <Textarea
+                // to be used in the future
                 placeholder="Please, Describe Your Product"
                 value={newProductDescription}
                 onChange={handleDescriptionChange}
+                bgColor="white"
+                //unused above this line to next breaker
               />
             </FormControl>
           </ModalBody>
-
+          {/* Lower area of model (buttons) */}
           <ModalFooter>
+            {/* add item button */}
             <Button
               colorScheme="blue"
               mr={3}
@@ -129,7 +199,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
             >
               Add Item
             </Button>
-            <Button>Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
