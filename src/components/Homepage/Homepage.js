@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 import Auth0LoginButton from '../Auth0LoginButton/Auth0Login.js';
 import Auth0LogoutButton from '../Auth0LogoutButton/Auth0Logout.js';
 import Auth0GiveButton from '../Auth0GiveButton/Auth0Give.js';
+import AuthenticationButton from '../Auth0InOutButton/Auth0InOut.js';
 import css from './Homepage.module.css';
+
 
 function Homepage() {
   return (
@@ -22,8 +24,10 @@ function Homepage() {
           <div className={css.logInButton}>
             {/* check to make sure button works, original button commented */}
             {/* <Button text="Log In" /> */}
-            <Auth0LoginButton />
-            <Auth0LogoutButton />
+            {/* <Auth0LoginButton />
+            <Auth0LogoutButton /> */}
+            {/* the login and log out buttons replaced by the line below */}
+            <AuthenticationButton/>
           </div>
           <div className={css.signUpButton}>
             <Button text="Sign Up" />
