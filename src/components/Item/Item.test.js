@@ -26,4 +26,10 @@ describe('test for Item component', () => {
     const actual = screen.getByTestId('item-location');
     expect(actual).toHaveTextContent(testProps.location);
   });
+
+  test('check whether the Item component renders the correct img src within img tag', () => {
+    render(<Item {...testProps} />);
+    const image = screen.getByAltText('Pink bomber jacket');
+    expect(image).toHaveAttribute('src', testProps.img);
+  });
 });

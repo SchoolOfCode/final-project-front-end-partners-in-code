@@ -6,7 +6,7 @@ import css from './ItemsDisplay.module.css';
 
 export default function ItemsDisplay({ items, onAddNewItem }) {
   return (
-    <div className={css.displayContainer}>
+    <div className={css.displayContainer} data-testid="list-item">
       <div className={css.box}>
         <Logo />
       </div>

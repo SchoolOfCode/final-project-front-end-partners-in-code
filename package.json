@@ -23,6 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "item-test": "npm test src/components/Item/Item.test.js",
+    "list-item-test": "npm test src/components/ListItem/ListItem.test.js",
+    "items-display-test": "npm test src/components/ItemsDisplay/ItemsDisplay.test.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

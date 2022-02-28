@@ -94,6 +94,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   return (
     <>
       <Button
+        data-testid="modal-button"
         onClick={() => {
           handleSizeClick(size);
           setOverlay(<OverlayOne />); //sets overlay
@@ -121,6 +122,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
         size={size}
         onClose={onClose}
         isCentered
+
         //scrollBehavior={outside}
       >
         {overlay}
