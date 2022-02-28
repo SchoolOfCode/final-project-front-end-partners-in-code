@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
+
+/* BACKGROUND IMAGE */
+
+.homepageContainer {
+  background: url(../bg-images//clothes.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  justify-content: left;
+  max-width: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.logoItem {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* AUTHENTICATION BUTTONS */
+
+.logInButton,
+.signUpButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.logInButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.logInButton:hover {
+  text-decoration: underline;
+}
+
+.signUpButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  border: solid 1px #e6998d;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpButton:hover {
+  background-color: #e6998d;
+}
+
+.pinkButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/* HEADINGS */
+
+.h1 {
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75em;
+}
+
+.h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+/* GIVE & BROWSE BUTTONS */
+
+.giveButton,
+.browseButton {
+  background-color: #a4ccae;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.giveButton:hover,
+.browseButton:hover {
+  background-color: #64847c;
+}
+
+.browseButton {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 115px;
+  margin-left: 20px;
+}
+
+.giveButton {
+  margin-right: 20px;
+}
+
+.greenButtons {
+  display: flex;
+  align-items: center;
+}
+
+.twoButtons {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 20px;
+}
