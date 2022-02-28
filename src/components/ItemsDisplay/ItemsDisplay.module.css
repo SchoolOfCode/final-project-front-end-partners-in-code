@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
 
-
+.browse {
+  text-align: center;
+  font-size: 2rem;
+  color: #fcefdb;
+  font-weight: 900;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  font-family: 'Abril Fatface', cursive;
+}
 
 .box {
   position: relative;
@@ -33,27 +41,18 @@
   width: auto;
   margin-right: 5px auto;
  
-  
-}
-.browse {
-  text-align: center;
-  font-size: 2rem;
-  color: #fcefdb;
-  font-weight: 900;
-  width: 100%;
-  margin: 0px 0px 0px 0px;
-  font-family: 'Abril Fatface', cursive;
 }
 
 
-.plusButton {
+.buttonContainer{
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
+
 @media only screen and (max-width: 600px) {
   .itemDisplayContainer {
-    background-color: lightblue;
+    
     display: grid;
     gap: 3em;
     grid-template-columns: repeat(1, 1fr);
