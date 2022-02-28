@@ -8,14 +8,18 @@ export default function Item({ img, alt, title, location }) {
        <div className={css.box} >
       
       <img src={img} alt={alt} />
-    </div>
-      <div class={css.productContent}>
-        
+      
+      </div>
+      
       <p className={css.title}>{title}</p>
       <p className={css.location}>{location}</p>
-    
-    </div>
+ 
+     
+     
+  
     </>
    
   );
 }
+
+

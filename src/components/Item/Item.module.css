@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
+.container {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3px;
+  justify-content: center;
+  
+}
+
 .box {
   position: relative;
-  width: 18.75em;
-  height: 18.75em;
+  width: 16.75em;
+  height: 16.75em;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .box img {
@@ -17,21 +28,7 @@
   transform: translate(-50%, -50%);
 }
 
-.productContent {
-  padding: 1rem;
-  border-left: 1px solid #dedede;
-  border-right: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-  width: 300px;
-  height: auto;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
-}
+
 
 .title {
   margin-top: 10px;
