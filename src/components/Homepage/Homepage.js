@@ -4,7 +4,9 @@ import H1 from '../Global/H1/H1.js';
 import H2 from '../Global/H2/H2.js';
 import Button from '../Global/Button/Button.js';
 import { Link } from 'react-router-dom';
-
+import Auth0LoginButton from '../Auth0LoginButton/Auth0Login.js';
+import Auth0LogoutButton from '../Auth0LogoutButton/Auth0Logout.js';
+import Auth0GiveButton from '../Auth0GiveButton/Auth0Give.js';
 import css from './Homepage.module.css';
 
 function Homepage() {
@@ -18,7 +20,10 @@ function Homepage() {
         </div>
         <div className={css.pinkButtons}>
           <div className={css.logInButton}>
-            <Button text="Log In" />
+            {/* check to make sure button works, original button commented */}
+            {/* <Button text="Log In" /> */}
+            <Auth0LoginButton />
+            <Auth0LogoutButton />
           </div>
           <div className={css.signUpButton}>
             <Button text="Sign Up" />
@@ -35,7 +40,8 @@ function Homepage() {
         <div className={css.greenButtons}>
           <Link to="items">
             <div className={css.giveButton}>
-              <Button text="+ Give" />
+              {/* <Button text="+ Give" /> */}
+              <Auth0GiveButton />
             </div>
           </Link>
 

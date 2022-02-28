@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/App/App.js';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 // import `ChakraProvider` component
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
@@ -31,11 +32,20 @@ const fonts = {
 export const theme = extendTheme({ colors, fonts });
 
 ReactDOM.render(
-  <ChakraProvider theme={theme}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ChakraProvider>,
+  <Auth0Provider
+    domain="dev-f39gzy2t.eu.auth0.com"
+    clientId="bNfd19UTo8TdI3MaomRZscw1aw2DhrJF"
+    //commented line below is the original auth0line
+    // redirectUri={window.location.origin}
+    redirectUri="http://localhost:3000/items"
+  >
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ChakraProvider>
+    ,
+  </Auth0Provider>,
 
   document.getElementById('root')
 );
