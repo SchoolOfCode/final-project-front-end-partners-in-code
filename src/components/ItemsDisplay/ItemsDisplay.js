@@ -7,15 +7,18 @@ import css from './ItemsDisplay.module.css';
 export default function ItemsDisplay({ items, onAddNewItem }) {
   return (
     <div className={css.displayContainer}>
-      <div >
-        <Logo className={css.box}/>
+      <div className={css.box}>
+        <Logo />
       </div>
       <div className={css.browse}>
         <H1 text="Browse..." />
       </div>
+      <div className={css.section}>
       <div className={css.itemDisplayContainer}>
           <ListItem items={items} />
       </div>
+      </div>
+     
       <div className={css.buttonContainer}>
           <AddNewItem onAddNewItem={onAddNewItem} />
       </div>

@@ -21,6 +21,11 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .itemDisplayContainer {
   display: grid;
   gap: 3em;
@@ -45,4 +50,12 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+@media only screen and (max-width: 600px) {
+  .itemDisplayContainer {
+    background-color: lightblue;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

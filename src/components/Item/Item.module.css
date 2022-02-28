@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
-.container {
-  
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3px;
-  justify-content: center;
-  
-}
+
 
 .box {
   position: relative;
