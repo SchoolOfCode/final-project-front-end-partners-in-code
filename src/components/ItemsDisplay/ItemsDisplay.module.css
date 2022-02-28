@@ -28,12 +28,16 @@
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
+  
 }
 .section{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
   
 }
 .itemDisplayContainer {
@@ -43,10 +47,9 @@
   width: auto;
   margin-right: 5px auto;
   
+  
  
 }
-
-
 .buttonContainer{
   display: flex;
   justify-content: center;
@@ -57,7 +60,6 @@
   .itemDisplayContainer {
     
     display: grid;
-    gap: 3em;
     grid-template-columns: repeat(1, 1fr);
   }
 }
