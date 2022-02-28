@@ -1,11 +1,12 @@
 import React from 'react';
-// import Mugs from '../../libs/images/mugs.jpeg';
+import { Link } from 'react-router-dom';
 import css from './Item.module.css';
 
 export default function Item({ img, alt, title, location }) {
   return (
     <>
-       <div className={css.box} >
+      <Link to="/contact">
+      <div className={css.box} >
       
       <img src={img} alt={alt} />
       
@@ -13,6 +14,8 @@ export default function Item({ img, alt, title, location }) {
       
       <p className={css.title}>{title}</p>
       <p className={css.location}>{location}</p>
+      </Link>
+  
  
      
      
