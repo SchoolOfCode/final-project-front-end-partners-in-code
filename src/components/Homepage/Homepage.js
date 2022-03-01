@@ -9,6 +9,7 @@ import Auth0LogoutButton from '../Auth0/Auth0LogoutButton/Auth0Logout.js';
 import Auth0GiveButton from '../Auth0/Auth0GiveButton/Auth0Give.js';
 import AuthenticationButton from '../Auth0/Auth0InOutButton/Auth0InOut.js';
 import css from './Homepage.module.css';
+import SignupButton from '../Auth0/Auth0SignUpButton/Auth0SignUp.js'
 
 function Homepage() {
   return (
@@ -29,7 +30,8 @@ function Homepage() {
             <AuthenticationButton />
           </div>
           <div className={css.signUpButton}>
-            <Button text="Sign Up" />
+            {/* <Button text="Sign Up" /> */}
+            <SignupButton/>
           </div>
         </div>
       </div>
