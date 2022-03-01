@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import css from './AddNewItem.module.css';
 import {
   Modal,
   ModalOverlay,
@@ -118,16 +118,23 @@ export default function AddItemPopUp({ onAddNewItem }) {
         size={size}
         onClose={onClose}
         isCentered
+        
         //scrollBehavior={outside}
       >
         {overlay}
 
-        <ModalContent bgColor="color.beige">
+        <ModalContent 
+        bgColor="color.beige"
+        borderRadius="25px">
+          
           <ModalHeader
             fontFamily="font.heading"
             bgColor="color.dustygreen"
+            borderTopLeftRadius="25px"
+            borderTopRightRadius="25px"
             color="white"
             textAlign="center"
+            
           >
             Add product
           </ModalHeader>
@@ -146,6 +153,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
                 value={newProductName}
                 onChange={handleNameChange}
                 bgColor="white"
+                borderRadius="25px"
               />
             </FormControl>
             {/* product location input */}
@@ -156,6 +164,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
                 value={newProductLocation}
                 onChange={handleLocationChange}
                 bgColor="white"
+                borderRadius="25px"
               />
             </FormControl>
             {/* product condition input */}
@@ -166,6 +175,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
                 value={newProductCondition}
                 onChange={handleConditionChange}
                 bgColor="white"
+                borderRadius="25px"
               />
             </FormControl>
             {/* product description input */}
@@ -177,26 +187,48 @@ export default function AddItemPopUp({ onAddNewItem }) {
                 value={newProductDescription}
                 onChange={handleDescriptionChange}
                 bgColor="white"
+                borderRadius="25px"
                 //unused above this line to next breaker
               />
             </FormControl>
           </ModalBody>
           {/* Lower area of model (buttons) */}
-          <ModalFooter>
+         
+          <ModalFooter 
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
             {/* add item button */}
-            <Button
-              colorScheme="blue"
-              mr={3}
+            
+            <Button 
+             
+             
               onClick={() => {
                 //on clicking, this button does two things:
                 onAddNewItem(newItem); // 1) adds a new item to the existing array of items
                 onClose(); // 2) closes the add item modal
               }}
               variant="ghost"
+              color="black"
+              variant="ghost"
+              fontSize="20px"
+              bgColor="color.pink"
+              width="180px"
+              height="45px"
+              size="lg"
+              display="flex"
+              textAlign="center"
+              boxShadow="lg"
+              position="center"
+              borderRadius="25px"
             >
               Add Item
             </Button>
+             
+         
           </ModalFooter>
+        
         </ModalContent>
       </Modal>
     </>
