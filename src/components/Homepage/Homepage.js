@@ -4,12 +4,11 @@ import H1 from '../Global/H1/H1.js';
 import H2 from '../Global/H2/H2.js';
 import Button from '../Global/Button/Button.js';
 import { Link } from 'react-router-dom';
-import Auth0LoginButton from '../Auth0LoginButton/Auth0Login.js';
-import Auth0LogoutButton from '../Auth0LogoutButton/Auth0Logout.js';
-import Auth0GiveButton from '../Auth0GiveButton/Auth0Give.js';
-import AuthenticationButton from '../Auth0InOutButton/Auth0InOut.js';
+import Auth0LoginButton from '../Auth0/Auth0LoginButton/Auth0Login.js';
+import Auth0LogoutButton from '../Auth0/Auth0LogoutButton/Auth0Logout.js';
+import Auth0GiveButton from '../Auth0/Auth0GiveButton/Auth0Give.js';
+import AuthenticationButton from '../Auth0/Auth0InOutButton/Auth0InOut.js';
 import css from './Homepage.module.css';
-
 
 function Homepage() {
   return (
@@ -27,7 +26,7 @@ function Homepage() {
             {/* <Auth0LoginButton />
             <Auth0LogoutButton /> */}
             {/* the login and log out buttons replaced by the line below */}
-            <AuthenticationButton/>
+            <AuthenticationButton />
           </div>
           <div className={css.signUpButton}>
             <Button text="Sign Up" />
