@@ -12,7 +12,7 @@
 .backButton {
   font-family: 'Abril Fatface', sans-serif;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .background {
@@ -24,10 +24,7 @@
   margin-right: 150px;
   display: flex;
   justify-content: center;
-}
-
-.headingContainer {
-  width: 800px;
+  height: 300px;
 }
 
 .heading {
@@ -38,15 +35,19 @@
   text-align: center;
 }
 
-.boxContainer {
-  display: flex;
-  justify-content: center;
+.headingContainer {
   width: 800px;
 }
 
 .box {
-  position: relative;
+  display: flex;
+  justify-content: center;
   width: 700px;
+}
+
+.boxContainer {
+  position: relative;
+  width: 800px;
   height: 200px;
   overflow: hidden;
   display: flex;

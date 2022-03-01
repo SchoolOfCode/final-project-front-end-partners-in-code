@@ -20,8 +20,8 @@ export default function ContactPage({ phone, email }) {
           <div className={css.heading}>
             <h2>Contact Information</h2>
           </div>
-          <div className={css.box}>
-            <div className={css.boxContainer}>
+          <div className={css.boxContainer}>
+            <div className={css.box}>
               <div className={css.title}>
                 <div className={css.titleContainer}>
                   <h3>Product Name</h3>
