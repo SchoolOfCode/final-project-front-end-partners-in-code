@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
 
-
+.background{
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .box {
   position: relative;
   width: 16.75em;
@@ -11,6 +13,7 @@
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 5%;
+
 }
 
 .box img {

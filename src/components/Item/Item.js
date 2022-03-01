@@ -4,7 +4,7 @@ import css from './Item.module.css';
 
 export default function Item({ img, alt, title, location }) {
   return (
-    <>
+    <div className={css.background}>
       <Link to="/contact">
       <div className={css.box} >
       
@@ -20,7 +20,7 @@ export default function Item({ img, alt, title, location }) {
      
      
   
-    </>
+    </div>
    
   );
 }
