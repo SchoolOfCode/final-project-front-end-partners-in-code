@@ -92,7 +92,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
   //above this testing backdrop
   return (
-    <>
+    <div data-testid="modal">
       <Button
         data-testid="modal-button"
         onClick={() => {
@@ -204,6 +204,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 }
