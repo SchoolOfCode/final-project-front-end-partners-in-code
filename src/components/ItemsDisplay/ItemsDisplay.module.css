@@ -53,10 +53,19 @@
  
 }
 .buttonContainer{
-  display: flex;
+ /*  display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2%;
+  padding-top: 2%; */
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 20%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  
   
 }
 
