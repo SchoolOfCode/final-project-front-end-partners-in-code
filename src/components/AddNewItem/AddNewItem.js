@@ -93,28 +93,29 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //above this testing backdrop
   return (
     <div data-testid="modal">
-      <Button
-        data-testid="modal-button"
-        onClick={() => {
-          handleSizeClick(size);
-          setOverlay(<OverlayOne />); //sets overlay
-          onOpen(); //runs overlay once on open (prevents loop)
-        }}
-        key={size}
-        color="black"
-        variant="ghost"
-        fontSize="40px"
-        bgColor="color.pink"
-        borderRadius="50"
-        size="lg"
-        justifyContent="center"
-        display="flex"
-        alignItems="center"
-        textAlign="center"
-        padding="30px"
-      >
-        +
-      </Button>
+      <div data-testid="modal-button">
+        <Button
+          onClick={() => {
+            handleSizeClick(size);
+            setOverlay(<OverlayOne />); //sets overlay
+            onOpen(); //runs overlay once on open (prevents loop)
+          }}
+          key={size}
+          color="black"
+          variant="ghost"
+          fontSize="40px"
+          bgColor="color.pink"
+          borderRadius="50"
+          size="lg"
+          justifyContent="center"
+          display="flex"
+          alignItems="center"
+          textAlign="center"
+          padding="30px"
+        >
+          +
+        </Button>
+      </div>
 
       {/* MODAL START */}
       <Modal
