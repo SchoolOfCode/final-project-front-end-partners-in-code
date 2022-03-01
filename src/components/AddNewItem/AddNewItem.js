@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import colors from '../../index';
+import style from './AddNewItem.module.css';
 
 import {
   Modal,
@@ -22,9 +23,9 @@ import {
 } from '@chakra-ui/react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Auth0LoginButton from '../Auth0/Auth0LoginButton/Auth0Login';
-import css from '../ItemsDisplay/ItemsDisplay.module.css';
 
 import UploadImages from '../ImageUpload/ImageUpload.js';
+import { css } from '@emotion/react';
 
 export default function AddItemPopUp({ onAddNewItem }) {
   const { isAuthenticated } = useAuth0();
@@ -217,7 +218,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
     );
   } else {
     return (
-      <div>
+      <div className={style.auth0Plus}>
         <Auth0LoginButton />
       </div>
     );
