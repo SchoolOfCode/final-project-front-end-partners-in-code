@@ -97,7 +97,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
         key={size}
         color="black"
         variant="ghost"
-        fontSize="50px"
+        fontSize="80px"
         bgColor="color.pink"
         borderRadius="50%"
         width="100px"
@@ -105,9 +105,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
         size="lg"
         justifyContent="center"
         display="flex"
-        alignItems="center"
+        
         textAlign="center"
-        padding="35px"
         boxShadow="dark-lg"
       >
         +
