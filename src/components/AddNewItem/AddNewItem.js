@@ -105,6 +105,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
         fontSize="50px"
         bgColor="color.pink"
         borderRadius="50%"
+        width="100px"
+        height="100px"
         size="lg"
         justifyContent="center"
         display="flex"
