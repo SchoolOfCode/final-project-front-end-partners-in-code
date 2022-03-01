@@ -32,19 +32,18 @@ const fonts = {
 export const theme = extendTheme({ colors, fonts });
 
 ReactDOM.render(
-  <Auth0Provider
-    domain="dev-f39gzy2t.eu.auth0.com"
-    clientId="bNfd19UTo8TdI3MaomRZscw1aw2DhrJF"
-    // redirectUri={window.location.origin}     //original redirect code
-    redirectUri="http://localhost:3000/items" // this rediredcts to x url once logged in
-  >
-    <ChakraProvider theme={theme}>
-      <BrowserRouter>
+  <ChakraProvider theme={theme}>
+    <BrowserRouter>
+      <Auth0Provider
+        domain="dev-f39gzy2t.eu.auth0.com"
+        clientId="bNfd19UTo8TdI3MaomRZscw1aw2DhrJF"
+        // redirectUri={window.location.origin}     //original redirect code
+        redirectUri="http://localhost:3000/items" // this rediredcts to x url once logged in
+      >
         <App />
-      </BrowserRouter>
-    </ChakraProvider>
-    ,
-  </Auth0Provider>,
+      </Auth0Provider>
+    </BrowserRouter>
+  </ChakraProvider>,
 
   document.getElementById('root')
 );
