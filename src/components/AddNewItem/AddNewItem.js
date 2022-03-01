@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import colors from '../../index';
 
 import {
   Modal,
@@ -15,10 +14,6 @@ import {
   FormLabel,
   Input,
   Textarea,
-  Image,
-  Box,
-  scrollBehavior,
-  // extendTheme,
 } from '@chakra-ui/react';
 
 import UploadImages from '../ImageUpload/ImageUpload.js';
@@ -113,7 +108,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
         alignItems="center"
         textAlign="center"
         padding="35px"
-        
+        boxShadow="dark-lg"
       >
         +
       </Button>
