@@ -102,30 +102,28 @@ export default function AddItemPopUp({ onAddNewItem }) {
 
     <div data-testid="modal">
       <div data-testid="modal-button">
-        <Button
-          onClick={() => {
-            handleSizeClick(size);
-            setOverlay(<OverlayOne />); //sets overlay
-            onOpen(); //runs overlay once on open (prevents loop)
-          }}
-          key={size}
-
-          color="black"
-          variant="ghost"
-          fontSize="40px"
-          bgColor="color.pink"
-          borderRadius="50"
-          size="lg"
-          justifyContent="center"
-          display="flex"
-          alignItems="center"
-          textAlign="center"
-          padding="30px"
-          textAlign="center"
-          boxShadow="dark-lg"
-        >
-          +
-        </Button>
+      <Button
+        onClick={() => {
+          handleSizeClick(size);
+          setOverlay(<OverlayOne />); //sets overlay
+          onOpen(); //runs overlay once on open (prevents loop)
+        }}
+        key={size}
+        color="black"
+        variant="ghost"
+        fontSize="80px"
+        bgColor="color.pink"
+        borderRadius="50%"
+        width="100px"
+        height="100px"
+        size="lg"
+        justifyContent="center"
+        display="flex"
+        textAlign="center"
+        boxShadow="dark-lg"
+      >
+        +
+      </Button>
 
         {/* MODAL START */}
         <Modal
@@ -236,6 +234,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
             </ModalFooter>
           </ModalContent>
         </Modal>
+        </div>
+        </div>
       </>
     );
   } else {
@@ -245,3 +245,4 @@ export default function AddItemPopUp({ onAddNewItem }) {
       </div>
     );
   }
+}
