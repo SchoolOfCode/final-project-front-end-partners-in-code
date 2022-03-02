@@ -1,7 +1,7 @@
 # Redirects from what the browser requests to what we serve
-/              https://reloved.netlify.app/
-/items           https://reloved.netlify.app/items
-/contact              https://reloved.netlify.app/contact
+/         302    
+/items    302       
+/contact  302            
 
 
 
