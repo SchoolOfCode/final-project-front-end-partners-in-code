@@ -13,8 +13,8 @@ import SignupButton from '../Auth0/Auth0SignUpButton/Auth0SignUp.js'
 
 function Homepage() {
   return (
-    <div className={css.homepageContainer}>
-      <div className={css.logoContainer}>
+        <div className={css.homepageContainer}>
+    <div className={css.logoContainer}>
         <div className={css.logoItem}>
           <div className={css.logo}>
             <Logo />
