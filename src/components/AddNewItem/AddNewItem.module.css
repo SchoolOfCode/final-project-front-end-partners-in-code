@@ -1,0 +1,19 @@
+.auth0Plus {
+  color: black;
+  font-size: 40px;
+  background-color: #e6998d;
+  border-radius: 50px;
+  size: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.buttonContainer {
+    margin-right: 15%;
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+  }
