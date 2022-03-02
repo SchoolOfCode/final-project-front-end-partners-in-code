@@ -87,14 +87,16 @@ export default function AddItemPopUp({ onAddNewItem }) {
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
   //above this testing backdrop
   return (
-    <>
-      <Button
-        onClick={() => {
-          handleSizeClick(size);
-          setOverlay(<OverlayOne />); //sets overlay
-          onOpen(); //runs overlay once on open (prevents loop)
-        }}
-        key={size}
+
+    <div data-testid="modal">
+      <div data-testid="modal-button">
+        <Button
+          onClick={() => {
+            handleSizeClick(size);
+            setOverlay(<OverlayOne />); //sets overlay
+            onOpen(); //runs overlay once on open (prevents loop)
+          }}
+          key={size}
         color="black"
         variant="ghost"
         fontSize="80px"
@@ -108,9 +110,11 @@ export default function AddItemPopUp({ onAddNewItem }) {
         
         textAlign="center"
         boxShadow="dark-lg"
-      >
-        +
-      </Button>
+        >
+          +
+        </Button>
+      </div>
+
 
       {/* MODAL START */}
       <Modal
@@ -119,7 +123,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
         onClose={onClose}
         isCentered
         
-        //scrollBehavior={outside}
       >
         {overlay}
 
@@ -231,6 +234,6 @@ export default function AddItemPopUp({ onAddNewItem }) {
         
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 }
