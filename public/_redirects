@@ -1,7 +1,6 @@
-# Redirects from what the browser requests to what we serve
-/         302    
-/items    302       
-/contact  302            
+/* /index.html 200
+
+
 
 
 
