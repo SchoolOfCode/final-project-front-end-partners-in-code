@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function ListItem({ items }) {
   return (
-    <div data-testid="item-list">
+    <>
       {items.map(function (item) {
         return (
           <div>
@@ -19,6 +19,6 @@ export default function ListItem({ items }) {
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
