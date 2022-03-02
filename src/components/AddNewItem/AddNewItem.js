@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import css from './AddNewItem.module.css';
+import colors from '../../index';
+import style from './AddNewItem.module.css';
+
 import {
   Modal,
   ModalOverlay,
@@ -15,10 +17,15 @@ import {
   Input,
   Textarea,
 } from '@chakra-ui/react';
+import { useAuth0 } from '@auth0/auth0-react';
+import Auth0LoginButton from '../Auth0/Auth0LoginButton/Auth0Login';
 
 import UploadImages from '../ImageUpload/ImageUpload.js';
+import { css } from '@emotion/react';
 
 export default function AddItemPopUp({ onAddNewItem }) {
+  const { isAuthenticated } = useAuth0();
+
   //states for each of the input fields
   const [newProductName, setProductName] = useState('');
   const [newProductLocation, setProductLocation] = useState('');
@@ -85,8 +92,13 @@ export default function AddItemPopUp({ onAddNewItem }) {
     />
   );
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
+
   //above this testing backdrop
-  return (
+
+
+  if (isAuthenticated) {
+    return (
+      <>
 
     <div data-testid="modal">
       <div data-testid="modal-button">
@@ -97,122 +109,114 @@ export default function AddItemPopUp({ onAddNewItem }) {
             onOpen(); //runs overlay once on open (prevents loop)
           }}
           key={size}
-        color="black"
-        variant="ghost"
-        fontSize="80px"
-        bgColor="color.pink"
-        borderRadius="50%"
-        width="100px"
-        height="100px"
-        size="lg"
-        justifyContent="center"
-        display="flex"
-        
-        textAlign="center"
-        boxShadow="dark-lg"
+
+          color="black"
+          variant="ghost"
+          fontSize="40px"
+          bgColor="color.pink"
+          borderRadius="50"
+          size="lg"
+          justifyContent="center"
+          display="flex"
+          alignItems="center"
+          textAlign="center"
+          padding="30px"
+          textAlign="center"
+          boxShadow="dark-lg"
         >
           +
         </Button>
-      </div>
 
+        {/* MODAL START */}
+        <Modal
+          isOpen={isOpen}
+          size={size}
+          onClose={onClose}
+          isCentered
+        >
+          {overlay}
 
-      {/* MODAL START */}
-      <Modal
-        isOpen={isOpen}
-        size={size}
-        onClose={onClose}
-        isCentered
-        
-      >
-        {overlay}
+          <ModalContent bgColor="color.beige" borderRadius="25px">
+            <ModalHeader
+              fontFamily="font.heading"
+              bgColor="color.dustygreen"
+              color="white"
+              textAlign="center"
+              borderTopLeftRadius="25px"
+              borderTopRightRadius="25px"
+            >
+              Add product
+            </ModalHeader>
+            {/* modal close button  */}
+            <ModalCloseButton />
 
-        <ModalContent 
-        bgColor="color.beige"
-        borderRadius="25px">
-          
-          <ModalHeader
-            fontFamily="font.heading"
-            bgColor="color.dustygreen"
-            borderTopLeftRadius="25px"
-            borderTopRightRadius="25px"
-            color="white"
-            textAlign="center"
-            
-          >
-            Add product
-          </ModalHeader>
-          {/* modal close button  */}
-          <ModalCloseButton />
-
-          {/* Modal body */}
-          <ModalBody>
-            {/* Upload images button */}
-            <UploadImages onImageChange={onImageChange} imageURLs={imageURLs} />
-            {/* product name input  */}
-            <FormControl>
-              <FormLabel>Product Name</FormLabel>
-              <Input
-                placeholder="Name of Your Product"
-                value={newProductName}
-                onChange={handleNameChange}
-                bgColor="white"
-                borderRadius="25px"
+            {/* Modal body */}
+            <ModalBody>
+              {/* Upload images button */}
+              <UploadImages
+                onImageChange={onImageChange}
+                imageURLs={imageURLs}
               />
-            </FormControl>
-            {/* product location input */}
-            <FormControl mt={4}>
-              <FormLabel>Location</FormLabel>
-              <Input
-                placeholder="Product Location"
-                value={newProductLocation}
-                onChange={handleLocationChange}
-                bgColor="white"
-                borderRadius="25px"
-              />
-            </FormControl>
-            {/* product condition input */}
-            <FormControl mt={4}>
-              <FormLabel>Condition</FormLabel>
-              <Input
-                placeholder="Product Condition"
-                value={newProductCondition}
-                onChange={handleConditionChange}
-                bgColor="white"
-                borderRadius="25px"
-              />
-            </FormControl>
-            {/* product description input */}
-            <FormControl mt={4}>
-              <FormLabel>Description</FormLabel>
-              <Textarea
-                // to be used in the future
-                placeholder="Please, Describe Your Product"
-                value={newProductDescription}
-                onChange={handleDescriptionChange}
-                bgColor="white"
-                borderRadius="25px"
-                //unused above this line to next breaker
-              />
-            </FormControl>
-          </ModalBody>
-          {/* Lower area of model (buttons) */}
-         
-          <ModalFooter 
-            display="flex"
+              {/* product name input  */}
+              <FormControl>
+                <FormLabel>Product Name</FormLabel>
+                <Input
+                  placeholder="Name of Your Product"
+                  value={newProductName}
+                  onChange={handleNameChange}
+                  bgColor="white"
+                  borderRadius="25px"
+                />
+              </FormControl>
+              {/* product location input */}
+              <FormControl mt={4}>
+                <FormLabel>Location</FormLabel>
+                <Input
+                  placeholder="Product Location"
+                  value={newProductLocation}
+                  onChange={handleLocationChange}
+                  bgColor="white"
+                  borderRadius="25px"
+                />
+              </FormControl>
+              {/* product condition input */}
+              <FormControl mt={4}>
+                <FormLabel>Condition</FormLabel>
+                <Input
+                  placeholder="Product Condition"
+                  value={newProductCondition}
+                  onChange={handleConditionChange}
+                  bgColor="white"
+                  borderRadius="25px"
+                />
+              </FormControl>
+              {/* product description input */}
+              <FormControl mt={4}>
+                <FormLabel>Description</FormLabel>
+                <Textarea
+                  // to be used in the future
+                  placeholder="Please, Describe Your Product"
+                  value={newProductDescription}
+                  onChange={handleDescriptionChange}
+                  bgColor="white"
+                  borderRadius="25px"
+                  //unused above this line to next breaker
+                />
+              </FormControl>
+            </ModalBody>
+            {/* Lower area of model (buttons) */}
+            <ModalFooter display="flex"
             alignItems="center"
-            justifyContent="center"
-          >
-            {/* add item button */}
-            
-            <Button 
-             
-             
-              onClick={() => {
-                //on clicking, this button does two things:
-                onAddNewItem(newItem); // 1) adds a new item to the existing array of items
-                onClose(); // 2) closes the add item modal
-              }}
-              variant="ghost"
+            justifyContent="center">
+              {/* add item button */}
+              <Button
+                colorScheme="blue"
+                mr={3}
+                onClick={() => {
+                  //on clicking, this button does two things:
+                  onAddNewItem(newItem); // 1) adds a new item to the existing array of items
+                  onClose(); // 2) closes the add item modal
+                }}
               color="black"
               variant="ghost"
               fontSize="20px"
@@ -225,15 +229,19 @@ export default function AddItemPopUp({ onAddNewItem }) {
               boxShadow="lg"
               position="center"
               borderRadius="25px"
-            >
-              Add Item
-            </Button>
-             
-         
-          </ModalFooter>
-        
-        </ModalContent>
-      </Modal>
-    </div>
-  );
-}
+
+              >
+                Add Item
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </>
+    );
+  } else {
+    return (
+      <div className={style.auth0Plus}>
+        <Auth0LoginButton />
+      </div>
+    );
+  }
