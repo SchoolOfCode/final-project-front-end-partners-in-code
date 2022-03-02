@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from '../Global/Button/Button';
 import css from './ContactPage.module.css';
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
 export default function ContactPage() {
   const location = useLocation();
@@ -14,7 +15,6 @@ export default function ContactPage() {
         </Link>
       </div>
       {/* <Logo className={css.contactPageLogo} /> */}
-
 
       <div className={css.background}>
         <div className={css.headingContainer}>
