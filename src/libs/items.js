@@ -1,7 +1,7 @@
 const items = [
   {
     itemId: 1,
-    title: 'Pink Bomber Jacker',
+    title: 'Pink Bomber Jacket',
     location: 'London',
     email: 'billybob@gmails.com',
     phone: '0789369923',

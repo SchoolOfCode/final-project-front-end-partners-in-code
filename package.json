@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.9.0",
     "@chakra-ui/react": "^1.8.5",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
@@ -23,6 +24,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "item-test": "npm test src/components/Item/Item.test.js",
+    "list-item-test": "npm test src/components/ListItem/ListItem.test.js",
+    "items-display-test": "npm test src/components/ItemsDisplay/ItemsDisplay.test.js",
+    "add-new-items-test": "npm test src/components/AddNewItem/AddNewItem.test.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

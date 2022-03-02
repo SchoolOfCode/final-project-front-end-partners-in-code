@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/App/App.js';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 // import `ChakraProvider` component
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
@@ -28,16 +29,23 @@ const fonts = {
   },
 };
 
-export const theme = extendTheme({ colors, fonts });
+const theme = extendTheme({ colors, fonts });
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>
     <BrowserRouter>
-      <App />
+      <Auth0Provider
+        domain="dev-f39gzy2t.eu.auth0.com"
+        clientId="bNfd19UTo8TdI3MaomRZscw1aw2DhrJF"
+        // redirectUri={window.location.origin}     //original redirect code
+        redirectUri="http://localhost:3000/items" // this rediredcts to x url once logged in
+      >
+        <App />
+      </Auth0Provider>
     </BrowserRouter>
   </ChakraProvider>,
 
-  document.getElementById('root')
+  document.getElementById('root') || document.createElement('div') // for testing purposes
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,97 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
+/* Whole page items and background image */
 .displayContainer {
-  width: 100%;
-  margin: auto;
+  width: auto;
   background-repeat: no-repeat;
-  background: url(../bg-images//shadow.jpeg);
+  background: url(../bg-images//flowers.jpeg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  /* background: url(../bg-images//shadow.jpeg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
-  height: 100vh; */
-  background-attachment: fixed;
+  padding-bottom: 30px;
 }
 
+/* Logo and sign up and log in buttons */
+.box {
+  position: relative;
+  width: 20vw;
+  max-width: 170px;
+  min-width: 100px;
+  margin-left: 3%;
+}
+
+/* AUTHENTICATION BUTTONS */
+.logInButton,
+.signUpButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.logInButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2px;
+}
+
+.logInButton:hover {
+  text-decoration: underline;
+}
+
+.signUpButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  border: solid 1px #e6998d;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpButton:hover {
+  background-color: #e6998d;
+}
+
+.pinkButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+
+/* H1 about the Browse.... test */
 .browse {
   text-align: center;
-  font-size: 2rem;
-  color: #fcefdb;
+  font-size: 3rem;
+  color: #e6998d;
+  text-shadow: 2px 2px #37332f;
   font-weight: 900;
   width: 100%;
   margin: 0px 0px 0px 0px;
   font-family: 'Abril Fatface', cursive;
+  margin-bottom: 2%;
+  letter-spacing: 4px;
+  min-width: 375px;
 }
 
-/* .listItemContainer {
-  margin-top: 10px;
-  font-size: 1rem;
-  text-align: center;
-  color: #37332f;
-  font-family: 'Montserrat', sans-serif;
+/* How the items are being desplayed */
+.section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  font-size: medium;
-  font-weight: 400;
-} */
-
-.listItemContainer {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 950px;
+  align-items: center;
 }
-
 .itemDisplayContainer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  gap: 3em;
+  grid-template-columns: repeat(3, 1fr);
+  width: auto;
+  margin-right: 5px auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-/* .plusButton {
-  background-color: #e6998d;
-  border-radius: 50px;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  position: relative;
-  left: 80%;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-} */
-
-.box {
-  position: relative;
-  max-width: 100px;
-  width: 100%;
-  height: 100%;
-}
-
+/* ADD button style */
 .buttonContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  left: 80%;
-  margin-right: 50px;
-
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
+  margin-right: 15%;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
 }
 
-.plusButton {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+/* Change position of ADD button when screen is smaller than 400px */
+@media only screen and (max-width: 400px) {
+  .buttonContainer {
+    margin-right: 5px;
+    position: fixed;
+    bottom: 10px;
+  }
+}
+
+/* Change amount of columns to 2 for displaying items when screen is smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .itemDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Change amount of columns to 1 for displaying items when screen is smaller than 600x */
+@media only screen and (max-width: 600px) {
+  .itemDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

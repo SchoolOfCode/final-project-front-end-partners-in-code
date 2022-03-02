@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 
+/* Background image of each image */
+.background {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px #888888;
+}
+/*  HOVER will make image pop up */
+.background:hover {
+  transform: scale(1.1);
+}
 .box {
   position: relative;
-  width: 18.75em;
-  height: 18.75em;
+  width: 16.75em;
+  height: 16.75em;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .box img {
@@ -15,22 +30,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.productContent {
-  padding: 1rem;
-  border-left: 1px solid #dedede;
-  border-right: 1px solid #dedede;
-  border-bottom: 1px solid #dedede;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-  width: 300px;
-  height: auto;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .title {
