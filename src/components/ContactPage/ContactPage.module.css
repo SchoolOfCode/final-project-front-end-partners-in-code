@@ -12,7 +12,14 @@
 .backButton {
   font-family: 'Abril Fatface', sans-serif;
   font-size: 20px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  margin-left: 148px;
+  padding-top: 50px;
+}
+
+.backButton:hover{
+  color:#64847c; 
+  
 }
 
 .background {

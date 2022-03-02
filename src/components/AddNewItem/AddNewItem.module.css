@@ -3,7 +3,8 @@
   font-size: 40px;
   background-color: #e6998d;
   border-radius: 50px;
-  size: 50px;
+  width: 80px;
+  height: 80px;
   justify-content: center;
   display: flex;
   align-items: center;

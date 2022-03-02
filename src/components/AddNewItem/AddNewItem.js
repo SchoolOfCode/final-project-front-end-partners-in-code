@@ -241,7 +241,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   } else {
     return (
       <div className={style.auth0Plus}>
-        <Auth0LoginButton />
+        <Auth0LoginButton text="+"/>
       </div>
     );
   }
