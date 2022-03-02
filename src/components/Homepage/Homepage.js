@@ -9,8 +9,8 @@ import css from './Homepage.module.css';
 
 function Homepage() {
   return (
-    <div className={css.homepageContainer}>
-      <div className={css.logoContainer}>
+        <div className={css.homepageContainer}>
+    <div className={css.logoContainer}>
         <div className={css.logoItem}>
           <div className={css.logo}>
             <Logo />

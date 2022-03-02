@@ -1,10 +1,11 @@
 import React from 'react';
-// import Mugs from '../../libs/images/mugs.jpeg';
+import { Link } from 'react-router-dom';
 import css from './Item.module.css';
 
 export default function Item({ img, alt, title, location }) {
   return (
-    <>
+
+    <div className={css.background}>
       <div className={css.box} data-testid="item">
         <img src={img} alt={alt} />
       </div>
@@ -16,6 +17,6 @@ export default function Item({ img, alt, title, location }) {
           {location}
         </p>
       </div>
-    </>
+    </div>
   );
 }

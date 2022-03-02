@@ -1,24 +1,24 @@
 import Item from '../Item/Item.js';
-import css from './ListItem.module.css';
+import { Link } from 'react-router-dom';
+
 export default function ListItem({ items }) {
   return (
-    <div className={css.parentContainer} data-testid="item-list">
-      <div className={css.container}>
-        {items.map(function (item) {
-          console.log(item.itemId);
-          return (
-            <div className={css.responsiveContainer}>
+    <div data-testid="item-list">
+      {items.map(function (item) {
+        return (
+          <div>
+            <Link to="/contact" state={{ from: item }}>
               <Item
                 key={item.itemId}
                 img={item.image.img}
-                alt={item.image.alt}
+                alt={item.alt}
                 title={item.title}
                 location={item.location}
               />
-            </div>
-          );
-        })}
-      </div>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 }
