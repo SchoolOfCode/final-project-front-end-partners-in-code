@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className={css.background}>
         <div className={css.headingContainer}>
           <div className={css.heading}>
-            <h2>Contact Information</h2>
+            <h2>Product Information</h2>
           </div>
           <div className={css.image}>
             <img src={from.image.img} alt={from.image.alt} />

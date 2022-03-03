@@ -74,6 +74,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
       img: imageURLs,
       alt: newProductName,
     },
+    description: newProductDescription,
   };
 
   //sets the state for the modal (toggle)
