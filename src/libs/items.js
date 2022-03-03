@@ -22,8 +22,7 @@ const items = [
       img: './images/wooden night stand.jpeg',
       alt: 'Wooden night stand',
     },
-    description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+    description: "Very good condition, but I don't have space for it :(",
   },
   {
     itemId: 3,
@@ -35,8 +34,7 @@ const items = [
       img: './images/old console.jpeg',
       alt: 'PS4 console',
     },
-    description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+    description: 'Old but still useable',
   },
   {
     itemId: 4,
@@ -49,7 +47,7 @@ const items = [
       alt: 'Mirror with gold frame',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      'Matches with everything! But I was given a bigger one so can give this one away',
   },
   {
     itemId: 5,
@@ -62,7 +60,7 @@ const items = [
       alt: 'Unicorn backpack',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      'Good condition, no holes or anything. Made from sturdy material and very cute for a little girl that likes unicorns!',
   },
   {
     itemId: 6,
@@ -75,7 +73,7 @@ const items = [
       alt: 'White mugs for tea and coffee',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      'Tea mug is a little bit chipped but still pretty good condition.',
   },
   {
     itemId: 7,
@@ -88,7 +86,7 @@ const items = [
       alt: 'black mountain bike',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      "I'm not into bikes anymore so happy to give this one away or exchange for something cool! Like a camera because I would like to get into photography now",
   },
   {
     itemId: 8,
@@ -101,7 +99,7 @@ const items = [
       alt: 'Professional Camera',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      'Willing to exchange for something that is similar in value.. like a bike lol',
   },
   {
     itemId: 9,
@@ -114,7 +112,7 @@ const items = [
       alt: 'Small grey chair',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      'Tiny scratch at the back (cats right?) but very comfy and soft to sit in.',
   },
   {
     itemId: 10,
@@ -126,8 +124,7 @@ const items = [
       img: './images/dice.jpg',
       alt: 'collection of dices',
     },
-    description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+    description: 'We lost the actual game board so yeah...',
   },
   {
     itemId: 11,
@@ -139,8 +136,7 @@ const items = [
       img: './images/mouse.jpg',
       alt: 'mouse for computer gamers',
     },
-    description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+    description: 'A bit used but still very good condition',
   },
   {
     itemId: 12,
@@ -153,7 +149,7 @@ const items = [
       alt: 'Nike trainers',
     },
     description:
-      "Very nice jacket, worn only once, unfortunately, it's too small now",
+      'Worn only couple of times but they are still clean and quite comfortable.',
   },
 ];
 
