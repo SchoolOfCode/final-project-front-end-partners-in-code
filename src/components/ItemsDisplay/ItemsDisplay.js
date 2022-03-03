@@ -6,6 +6,7 @@ import css from './ItemsDisplay.module.css';
 import AuthenticationButton from '../Auth0/Auth0InOutButton/Auth0InOut.js';
 import SignupButton from '../Auth0/Auth0SignUpButton/Auth0SignUp.js';
 import { Link } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar.js';
 
 export default function ItemsDisplay({ items, onAddNewItem }) {
   return (
@@ -20,12 +21,13 @@ export default function ItemsDisplay({ items, onAddNewItem }) {
         </div>
         <div className={css.pinkButtons}>
           <div className={css.logInButton}>
-            {/* <Button text="Log In" /> */}
             <AuthenticationButton />
           </div>
           <div className={css.signUpButton}>
-            {/* <Button text="Sign Up" /> */}
             <SignupButton />
+          </div>
+          <div className={css.navBar}>
+            <NavBar />
           </div>
         </div>
       </div>

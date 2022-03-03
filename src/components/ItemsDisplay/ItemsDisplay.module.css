@@ -74,6 +74,10 @@
   margin-top: 30px;
   margin-right: 15px;
 }
+/* navBar position */
+.navBar {
+  margin-left: 15px;
+}
 
 /* H1 about the Browse.... test */
 .browse {
