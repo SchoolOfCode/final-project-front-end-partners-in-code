@@ -114,16 +114,17 @@ export default function AddItemPopUp({ onAddNewItem }) {
               key={size}
               color="black"
               variant="ghost"
-              fontSize="80px"
+              fontSize="40px"
               bgColor="color.pink"
-              borderRadius="50%"
-              width="100px"
-              height="100px"
-              size="lg"
+              borderRadius="50px"
+              width="80px"
+              height="80px"
               justifyContent="center"
               display="flex"
+              alignItems="center"
               textAlign="center"
               boxShadow="dark-lg"
+              padding="30px"
             >
               +
             </Button>
