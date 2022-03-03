@@ -9,6 +9,8 @@ const items = [
       img: './images/bomber jacket.jpeg',
       alt: 'Pink bomber jacket',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 2,
@@ -20,6 +22,8 @@ const items = [
       img: './images/wooden night stand.jpeg',
       alt: 'Wooden night stand',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 3,
@@ -31,6 +35,8 @@ const items = [
       img: './images/old console.jpeg',
       alt: 'PS4 console',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 4,
@@ -42,6 +48,8 @@ const items = [
       img: './images/vintage mirror.jpeg',
       alt: 'Mirror with gold frame',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 5,
@@ -53,6 +61,8 @@ const items = [
       img: "./images/kid's backpack.jpeg",
       alt: 'Unicorn backpack',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 6,
@@ -64,6 +74,8 @@ const items = [
       img: './images/mugs.jpeg',
       alt: 'White mugs for tea and coffee',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 7,
@@ -75,6 +87,8 @@ const items = [
       img: './images/bike.jpg',
       alt: 'black mountain bike',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 8,
@@ -86,6 +100,8 @@ const items = [
       img: './images/camera.jpg',
       alt: 'Professional Camera',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 9,
@@ -97,6 +113,8 @@ const items = [
       img: './images/chair.jpg',
       alt: 'Small grey chair',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 10,
@@ -108,6 +126,8 @@ const items = [
       img: './images/dice.jpg',
       alt: 'collection of dices',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 11,
@@ -119,6 +139,8 @@ const items = [
       img: './images/mouse.jpg',
       alt: 'mouse for computer gamers',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
   {
     itemId: 12,
@@ -130,6 +152,8 @@ const items = [
       img: './images/trainers.jpg',
       alt: 'Nike trainers',
     },
+    description:
+      "Very nice jacket, worn only once, unfortunately, it's too small now",
   },
 ];
 

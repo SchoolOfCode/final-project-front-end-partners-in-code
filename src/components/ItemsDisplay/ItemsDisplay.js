@@ -5,6 +5,7 @@ import ListItem from '../ListItem/ListItem.js';
 import css from './ItemsDisplay.module.css';
 import AuthenticationButton from '../Auth0/Auth0InOutButton/Auth0InOut.js';
 import SignupButton from '../Auth0/Auth0SignUpButton/Auth0SignUp.js';
+import { Link } from 'react-router-dom';
 
 export default function ItemsDisplay({ items, onAddNewItem }) {
   return (
@@ -12,7 +13,9 @@ export default function ItemsDisplay({ items, onAddNewItem }) {
       <div className={css.box}>
         <div className={css.logoItem}>
           <div className={css.logo}>
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
           </div>
         </div>
         <div className={css.pinkButtons}>

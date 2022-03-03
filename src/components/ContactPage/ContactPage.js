@@ -20,6 +20,13 @@ export default function ContactPage() {
           <div className={css.heading}>
             <h2>Contact Information</h2>
           </div>
+          <div className={css.image}>
+            <img src={from.image.img} alt={from.image.alt} />
+          </div>
+          <div className={css.description}>
+            <h3>Product Description</h3>
+            <p>{from.description}</p>
+          </div>
           <div className={css.boxContainer}>
             <div className={css.title}>
               <h3>Product Name</h3>
