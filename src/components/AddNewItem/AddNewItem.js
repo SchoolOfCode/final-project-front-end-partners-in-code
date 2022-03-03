@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import colors from '../../index';
 import style from './AddNewItem.module.css';
 
 import {
@@ -21,7 +20,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Auth0LoginButton from '../Auth0/Auth0LoginButton/Auth0Login';
 
 import UploadImages from '../ImageUpload/ImageUpload.js';
-import { css } from '@emotion/react';
 
 export default function AddItemPopUp({ onAddNewItem }) {
   const { isAuthenticated } = useAuth0();
@@ -60,9 +58,16 @@ export default function AddItemPopUp({ onAddNewItem }) {
     setImages([...e.target.files]);
   }
 
+  //function to generate random number and store in variable
+  function randomIdNumber() {
+    return Math.floor(Math.random() * (1000 - 12)) + 12;
+  }
+
+  let temporaryId = randomIdNumber();
+
   //this variable handles the structure(template) of our object item
   const newItem = {
-    itemId: 13,
+    itemId: temporaryId,
     title: newProductName,
     location: newProductLocation,
     image: {
