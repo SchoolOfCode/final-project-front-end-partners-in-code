@@ -8,7 +8,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const AuthenticationButton = () => {
   const { isAuthenticated } = useAuth0();
 
-  return isAuthenticated ? <Auth0LogoutButton /> : <Auth0LoginButton />;
+  return isAuthenticated ? <Auth0LogoutButton /> : <Auth0LoginButton text="Log In"/>;
 };
 
 export default AuthenticationButton;

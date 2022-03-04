@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import css from './Item.module.css';
 
 export default function Item({ img, alt, title, location }) {

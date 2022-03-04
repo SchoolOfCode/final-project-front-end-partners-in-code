@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import colors from '../../index';
 import style from './AddNewItem.module.css';
 
 import {
@@ -21,7 +20,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Auth0LoginButton from '../Auth0/Auth0LoginButton/Auth0Login';
 
 import UploadImages from '../ImageUpload/ImageUpload.js';
-import { css } from '@emotion/react';
 
 export default function AddItemPopUp({ onAddNewItem }) {
   const { isAuthenticated } = useAuth0();
@@ -60,15 +58,23 @@ export default function AddItemPopUp({ onAddNewItem }) {
     setImages([...e.target.files]);
   }
 
+  //function to generate random number and store in variable
+  function randomIdNumber() {
+    return Math.floor(Math.random() * (1000 - 12)) + 12;
+  }
+
+  let temporaryId = randomIdNumber();
+
   //this variable handles the structure(template) of our object item
   const newItem = {
-    itemId: 13,
+    itemId: temporaryId,
     title: newProductName,
     location: newProductLocation,
     image: {
       img: imageURLs,
       alt: newProductName,
     },
+    description: newProductDescription,
   };
 
   //sets the state for the modal (toggle)
@@ -95,153 +101,148 @@ export default function AddItemPopUp({ onAddNewItem }) {
 
   //above this testing backdrop
 
-
   if (isAuthenticated) {
     return (
       <>
-
-    <div data-testid="modal">
-      <div data-testid="modal-button">
-      <Button
-        onClick={() => {
-          handleSizeClick(size);
-          setOverlay(<OverlayOne />); //sets overlay
-          onOpen(); //runs overlay once on open (prevents loop)
-        }}
-        key={size}
-        color="black"
-        variant="ghost"
-        fontSize="80px"
-        bgColor="color.pink"
-        borderRadius="50%"
-        width="100px"
-        height="100px"
-        size="lg"
-        justifyContent="center"
-        display="flex"
-        textAlign="center"
-        boxShadow="dark-lg"
-      >
-        +
-      </Button>
-
-        {/* MODAL START */}
-        <Modal
-          isOpen={isOpen}
-          size={size}
-          onClose={onClose}
-          isCentered
-        >
-          {overlay}
-
-          <ModalContent bgColor="color.beige" borderRadius="25px">
-            <ModalHeader
-              fontFamily="font.heading"
-              bgColor="color.dustygreen"
-              color="white"
-              textAlign="center"
-              borderTopLeftRadius="25px"
-              borderTopRightRadius="25px"
-            >
-              Add product
-            </ModalHeader>
-            {/* modal close button  */}
-            <ModalCloseButton />
-
-            {/* Modal body */}
-            <ModalBody>
-              {/* Upload images button */}
-              <UploadImages
-                onImageChange={onImageChange}
-                imageURLs={imageURLs}
-              />
-              {/* product name input  */}
-              <FormControl>
-                <FormLabel>Product Name</FormLabel>
-                <Input
-                  placeholder="Name of Your Product"
-                  value={newProductName}
-                  onChange={handleNameChange}
-                  bgColor="white"
-                  borderRadius="25px"
-                />
-              </FormControl>
-              {/* product location input */}
-              <FormControl mt={4}>
-                <FormLabel>Location</FormLabel>
-                <Input
-                  placeholder="Product Location"
-                  value={newProductLocation}
-                  onChange={handleLocationChange}
-                  bgColor="white"
-                  borderRadius="25px"
-                />
-              </FormControl>
-              {/* product condition input */}
-              <FormControl mt={4}>
-                <FormLabel>Condition</FormLabel>
-                <Input
-                  placeholder="Product Condition"
-                  value={newProductCondition}
-                  onChange={handleConditionChange}
-                  bgColor="white"
-                  borderRadius="25px"
-                />
-              </FormControl>
-              {/* product description input */}
-              <FormControl mt={4}>
-                <FormLabel>Description</FormLabel>
-                <Textarea
-                  // to be used in the future
-                  placeholder="Please, Describe Your Product"
-                  value={newProductDescription}
-                  onChange={handleDescriptionChange}
-                  bgColor="white"
-                  borderRadius="25px"
-                  //unused above this line to next breaker
-                />
-              </FormControl>
-            </ModalBody>
-            {/* Lower area of model (buttons) */}
-            <ModalFooter display="flex"
-            alignItems="center"
-            justifyContent="center">
-              {/* add item button */}
-              <Button
-                colorScheme="blue"
-                mr={3}
-                onClick={() => {
-                  //on clicking, this button does two things:
-                  onAddNewItem(newItem); // 1) adds a new item to the existing array of items
-                  onClose(); // 2) closes the add item modal
-                }}
+        <div data-testid="modal">
+          <div data-testid="modal-button">
+            <Button
+              onClick={() => {
+                handleSizeClick(size);
+                setOverlay(<OverlayOne />); //sets overlay
+                onOpen(); //runs overlay once on open (prevents loop)
+              }}
+              key={size}
               color="black"
               variant="ghost"
-              fontSize="20px"
+              fontSize="40px"
               bgColor="color.pink"
-              width="180px"
-              height="45px"
-              size="lg"
+              borderRadius="50px"
+              width="80px"
+              height="80px"
+              justifyContent="center"
               display="flex"
+              alignItems="center"
               textAlign="center"
-              boxShadow="lg"
-              position="center"
-              borderRadius="25px"
+              boxShadow="dark-lg"
+              padding="30px"
+            >
+              +
+            </Button>
 
-              >
-                Add Item
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-        </div>
+            {/* MODAL START */}
+            <Modal isOpen={isOpen} size={size} onClose={onClose} isCentered>
+              {overlay}
+
+              <ModalContent bgColor="color.beige" borderRadius="25px">
+                <ModalHeader
+                  fontFamily="font.heading"
+                  bgColor="color.dustygreen"
+                  color="white"
+                  textAlign="center"
+                  borderTopLeftRadius="25px"
+                  borderTopRightRadius="25px"
+                >
+                  Add product
+                </ModalHeader>
+                {/* modal close button  */}
+                <ModalCloseButton />
+
+                {/* Modal body */}
+                <ModalBody>
+                  {/* Upload images button */}
+                  <UploadImages
+                    onImageChange={onImageChange}
+                    imageURLs={imageURLs}
+                  />
+                  {/* product name input  */}
+                  <FormControl>
+                    <FormLabel>Product Name</FormLabel>
+                    <Input
+                      placeholder="Name of Your Product"
+                      value={newProductName}
+                      onChange={handleNameChange}
+                      bgColor="white"
+                      borderRadius="25px"
+                    />
+                  </FormControl>
+                  {/* product location input */}
+                  <FormControl mt={4}>
+                    <FormLabel>Location</FormLabel>
+                    <Input
+                      placeholder="Product Location"
+                      value={newProductLocation}
+                      onChange={handleLocationChange}
+                      bgColor="white"
+                      borderRadius="25px"
+                    />
+                  </FormControl>
+                  {/* product condition input */}
+                  <FormControl mt={4}>
+                    <FormLabel>Condition</FormLabel>
+                    <Input
+                      placeholder="Product Condition"
+                      value={newProductCondition}
+                      onChange={handleConditionChange}
+                      bgColor="white"
+                      borderRadius="25px"
+                    />
+                  </FormControl>
+                  {/* product description input */}
+                  <FormControl mt={4}>
+                    <FormLabel>Description</FormLabel>
+                    <Textarea
+                      // to be used in the future
+                      placeholder="Please, Describe Your Product"
+                      value={newProductDescription}
+                      onChange={handleDescriptionChange}
+                      bgColor="white"
+                      borderRadius="25px"
+                      //unused above this line to next breaker
+                    />
+                  </FormControl>
+                </ModalBody>
+                {/* Lower area of model (buttons) */}
+                <ModalFooter
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  {/* add item button */}
+                  <Button
+                    colorScheme="blue"
+                    mr={3}
+                    onClick={() => {
+                      //on clicking, this button does two things:
+                      onAddNewItem(newItem); // 1) adds a new item to the existing array of items
+                      onClose(); // 2) closes the add item modal
+                    }}
+                    color="black"
+                    variant="ghost"
+                    fontSize="20px"
+                    bgColor="color.pink"
+                    width="180px"
+                    height="45px"
+                    size="lg"
+                    display="flex"
+                    textAlign="center"
+                    boxShadow="lg"
+                    position="center"
+                    borderRadius="25px"
+                  >
+                    Add Item
+                  </Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          </div>
         </div>
       </>
     );
   } else {
     return (
       <div className={style.auth0Plus}>
-        <Auth0LoginButton />
+        <Auth0LoginButton text="+" />
       </div>
     );
   }

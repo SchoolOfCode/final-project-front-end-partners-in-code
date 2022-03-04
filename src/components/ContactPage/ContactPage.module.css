@@ -1,85 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
-
+/* background and whole page */
 .contactContainer {
-  background: url(../bg-images//flowers.jpeg);
-  background-position: center;
-  background-size: cover;
+  width: auto;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
+  background: url(../bg-images//flowers.jpeg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 9em;
 }
-
+/* Back to Browser Link */
 .backButton {
   font-family: 'Abril Fatface', sans-serif;
-  font-size: 20px;
-  margin-bottom: 50px;
+  font-size: 1.3em;
+  margin-left: 20vw;
+  padding-top: 3vw;
 }
-
+/* On Hover Back to Browser becomes green */
+.backButton:hover {
+  color: #64847c;
+}
+/* Main Container, white Box containing the whole Contact Details */
 .background {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
-  padding: 10px;
+  padding: 1.7em 1.7em 1em 1.7em;
   box-shadow: 5px 5px #888888;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 20vw;
+  margin-right: 20vw;
   display: flex;
   justify-content: center;
-  height: 300px;
 }
-
-.heading {
+/* Div within the whole of the white box (.background) */
+.headingContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: 'Abril Fatface', sans-serif;
   font-size: 35px;
   text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-
-.headingContainer {
-  width: 800px;
-}
-
-.box {
+/* container for H2 Contact Information */
+.heading {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 700px;
+  align-items: center;
 }
 
+/* Contaier that contains all the divs of Product name, location, Phone,
+ email, currently showing them in individuals columns */
 .boxContainer {
-  position: relative;
-  width: 800px;
-  height: 200px;
-  overflow: hidden;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  flex-wrap: wrap;
 }
 
-.titleContainer,
-.locationContainer,
-.phoneContainer,
-.emailContainer {
-  padding: 10px;
+/* if the size of the screen is smaller than 785px, the .boxContainer 
+    will make Product Name, Location, Phone, Email flex into 1 column  */
+@media (max-width: 810px) {
+  .boxContainer {
+    flex-direction: column;
+  }
 }
 
+/* Title, location, phone, email containers, shows each section in column */
 .title,
 .location,
 .phone,
-.email {
+.email,
+.description,
+.image {
   font-size: 0.5rem;
   text-align: center;
   color: #37332f;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
+  flex-wrap: wrap;
   font-size: medium;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  padding-bottom: 1rem;
+}
+
+.image img {
+  width: 18vw;
+  min-width: 200px;
+  max-width: 200px;
+  height: 35vh;
+  padding: none;
+  margin: 10px 0 10px 0;
 }
 
 p {
   font-family: 'Abril Fatface', sans-serif;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 h3 {
@@ -88,36 +112,12 @@ h3 {
   font-size: 15px;
 }
 
+/* font-size re-size from a Min to a Max as the screen becomes smaller */
 @media screen and (min-width: 320px) {
   p {
-    font-size: calc(10px + (26 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
+  h3 {
+    font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
   }
 }
-
-/* .contactPageLogo {
-  min-width: 20vw;
-  max-width: 25vw;
-} */
-
-/* #root {
-  margin: 0;
-  padding: 0;
-} */
-
-/* .informationContainer {
-  margin-top: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .box img {
-  position: absolute;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
