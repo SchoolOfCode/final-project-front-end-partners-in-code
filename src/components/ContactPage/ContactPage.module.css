@@ -9,8 +9,7 @@
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 5em;
-  margin-bottom: 0;
+  padding-bottom: 9em;
 }
 /* Back to Browser Link */
 .backButton {
