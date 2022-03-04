@@ -18,34 +18,31 @@ export default function ContactPage() {
       <div className={css.background}>
         <div className={css.headingContainer}>
           <div className={css.heading}>
-            <h2>Contact Information</h2>
+            <h2>Product Information</h2>
+          </div>
+          <div className={css.image}>
+            <img src={from.image.img} alt={from.image.alt} />
+          </div>
+          <div className={css.description}>
+            <h3>Product Description</h3>
+            <p>{from.description}</p>
           </div>
           <div className={css.boxContainer}>
-            <div className={css.box}>
-              <div className={css.title}>
-                <div className={css.titleContainer}>
-                  <h3>Product Name</h3>
-                  <p>{from.title}</p>
-                </div>
-              </div>
-              <div className={css.location}>
-                <div className={css.locationContainer}>
-                  <h3>Location</h3>
-                  <p>{from.location}</p>
-                </div>
-              </div>
-              <div className={css.phone}>
-                <div className={css.phoneContainer}>
-                  <h3>Phone Number</h3>
-                  <p>{from.phone}</p>
-                </div>
-              </div>
-              <div className={css.email}>
-                <div className={css.emailContainer}>
-                  <h3>E-mail</h3>
-                  <p>{from.email}</p>
-                </div>
-              </div>
+            <div className={css.title}>
+              <h3>Product Name</h3>
+              <p>{from.title}</p>
+            </div>
+            <div className={css.location}>
+              <h3>Location</h3>
+              <p>{from.location}</p>
+            </div>
+            <div className={css.phone}>
+              <h3>Phone Number</h3>
+              <p>{from.phone}</p>
+            </div>
+            <div className={css.email}>
+              <h3>E-mail</h3>
+              <p>{from.email}</p>
             </div>
           </div>
         </div>
