@@ -8,6 +8,7 @@ import {
   EmailIcon,
   ArrowForwardIcon,
 } from '@chakra-ui/icons';
+
 import {
   Menu,
   MenuButton,
@@ -19,6 +20,8 @@ import {
   //   MenuOptionGroup,
   //   MenuDivider,
 } from '@chakra-ui/react';
+
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   return (
@@ -54,12 +57,14 @@ export default function NavBar() {
           >
             Volunteer
           </MenuItem>
-          <MenuItem
-            icon={<InfoOutlineIcon />}
-            _hover={{ bgColor: 'color.mintgreen' }}
-          >
-            About Us
-          </MenuItem>
+          <Link to="/about-us">
+            <MenuItem
+              icon={<InfoOutlineIcon />}
+              _hover={{ bgColor: 'color.mintgreen' }}
+            >
+              About Us
+            </MenuItem>
+          </Link>
           <MenuItem
             icon={<PhoneIcon />}
             _hover={{ bgColor: 'color.mintgreen' }}

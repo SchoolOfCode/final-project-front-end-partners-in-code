@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import ItemsDisplay from '../ItemsDisplay/ItemsDisplay.js';
 import items from '../../libs/items.js';
 import AddItemPopUp from '../AddNewItem/AddNewItem';
+import AboutUs from '../AboutUs/AboutUs.js';
 
 function App() {
   //this state keeps whole array of items
@@ -28,6 +29,7 @@ function App() {
             <ItemsDisplay items={updatedListItems} onAddNewItem={handleClick} />
           }
         />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </div>
   );

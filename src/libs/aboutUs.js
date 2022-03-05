@@ -1,5 +1,6 @@
 const aboutUs = [
   {
+    id: 1,
     image: {
       img: './images/chair.jpg',
       alt: 'Small grey chair',
@@ -9,6 +10,7 @@ const aboutUs = [
     linkedin: 'https://www.linkedin.com/in/yuanlunayu/',
   },
   {
+    id: 2,
     image: {
       img: './images/chair.jpg',
       alt: 'Small grey chair',
@@ -19,6 +21,7 @@ const aboutUs = [
     linkedin: 'https://www.linkedin.com/in/sandraskolarczyk/',
   },
   {
+    id: 3,
     image: {
       img: './images/chair.jpg',
       alt: 'Small grey chair',
@@ -28,6 +31,7 @@ const aboutUs = [
     linkedin: 'https://www.linkedin.com/',
   },
   {
+    id: 4,
     image: {
       img: './images/chair.jpg',
       alt: 'Small grey chair',
@@ -37,6 +41,7 @@ const aboutUs = [
     linkedin: 'https://www.linkedin.com/in/yuanlunayu/',
   },
   {
+    id: 5,
     image: {
       img: './images/chair.jpg',
       alt: 'Small grey chair',
@@ -46,6 +51,7 @@ const aboutUs = [
     linkedin: 'https://www.linkedin.com/',
   },
   {
+    id: 6,
     image: {
       img: './images/chair.jpg',
       alt: 'Small grey chair',
