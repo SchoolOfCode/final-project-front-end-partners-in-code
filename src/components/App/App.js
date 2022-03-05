@@ -4,8 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import ItemsDisplay from '../ItemsDisplay/ItemsDisplay.js';
 import items from '../../libs/items.js';
-import AddItemPopUp from '../AddNewItem/AddNewItem';
-import AboutUs from '../AboutUs/AboutUs.js';
+import AboutUsDisplay from '../AboutUsDisplay/AboutUsDisplay.js';
 
 function App() {
   //this state keeps whole array of items
@@ -29,7 +28,7 @@ function App() {
             <ItemsDisplay items={updatedListItems} onAddNewItem={handleClick} />
           }
         />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about-us" element={<AboutUsDisplay />} />
       </Routes>
     </div>
   );

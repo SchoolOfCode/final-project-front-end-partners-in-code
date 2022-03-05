@@ -9,8 +9,16 @@ export default function Profile({ img, alt, name, github, linkedin }) {
       </div>
 
       <p className={css.name}>{name}</p>
-      <p className={css.github}>{github}</p>
-      <p className={css.linkedin}>{linkedin}</p>
+      <p className={css.github}>
+        <a href={github} target="_blank" rel="noreferrer">
+          Github
+        </a>
+      </p>
+      <p className={css.linkedin}>
+        <a href={linkedin} target="_blank" rel="noreferrer">
+          Linkedin
+        </a>
+      </p>
     </div>
   );
 }

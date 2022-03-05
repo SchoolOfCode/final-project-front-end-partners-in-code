@@ -22,6 +22,7 @@ import {
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
+import Homepage from '../Homepage/Homepage.js';
 
 export default function NavBar() {
   return (
@@ -38,12 +39,14 @@ export default function NavBar() {
           <MenuItem icon={<StarIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
             Profile
           </MenuItem>
-          <MenuItem
-            icon={<ArrowForwardIcon />}
-            _hover={{ bgColor: 'color.mintgreen' }}
-          >
-            Homepage
-          </MenuItem>
+          <Link to="/">
+            <MenuItem
+              icon={<ArrowForwardIcon />}
+              _hover={{ bgColor: 'color.mintgreen' }}
+            >
+              Homepage
+            </MenuItem>
+          </Link>
           <MenuItem icon={<InfoIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
             {' '}
             Community Guidelines

@@ -7,10 +7,7 @@
   padding: 10px;
   box-shadow: 5px 5px #888888;
 }
-/*  HOVER will make image pop up */
-.background:hover {
-  transform: scale(1.1);
-}
+
 .box {
   position: relative;
   width: 16.75em;
@@ -32,7 +29,7 @@
   transform: translate(-50%, -50%);
 }
 
-.name{
+.name {
   margin-top: 10px;
   font-size: 1rem;
   text-align: center;
@@ -44,7 +41,8 @@
   font-size: medium;
 }
 
-.github,.linkedin {
+.github,
+.linkedin {
   margin-top: 10px;
   font-size: 1rem;
   text-align: center;
@@ -55,4 +53,3 @@
   flex-direction: column;
   font-size: medium;
 }
-

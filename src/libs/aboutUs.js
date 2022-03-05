@@ -12,8 +12,8 @@ const aboutUs = [
   {
     id: 2,
     image: {
-      img: './images/chair.jpg',
-      alt: 'Small grey chair',
+      img: './profile-images/sandra.jpg',
+      alt: "Sandra's profile picture",
     },
     name: 'Sandra Skolarczyk',
     github:
@@ -33,8 +33,8 @@ const aboutUs = [
   {
     id: 4,
     image: {
-      img: './images/chair.jpg',
-      alt: 'Small grey chair',
+      img: './profile-images/luna.png',
+      alt: "Luna's profile picture",
     },
     name: 'Yuan Luna Yu',
     github: 'https://github.com/lunay-y',
