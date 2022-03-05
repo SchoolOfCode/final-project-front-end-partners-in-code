@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
+
+/* Whole page items and background image */
+.displayContainer {
+  width: auto;
+  background-repeat: no-repeat;
+  background: url(../bg-images//flowers.jpeg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 30px;
+}
+
+/* Logo and sign up and log in buttons */
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logoItem {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo {
+  position: relative;
+  width: 20vw;
+  max-width: 170px;
+  min-width: 100px;
+  margin-left: 3%;
+  padding-bottom: 5px;
+}
+
+/* AUTHENTICATION BUTTONS */
+.logInButton,
+.signUpButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.logInButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2px;
+}
+
+.logInButton:hover {
+  text-decoration: underline;
+}
+
+.signUpButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  border: solid 1px #e6998d;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpButton:hover {
+  background-color: #e6998d;
+}
+
+.pinkButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+/* navBar position */
+.navBar {
+  margin-left: 15px;
+}
+
+/* H1 about the Browse.... test */
+.browse {
+  text-align: center;
+  font-size: 3rem;
+  color: #e6998d;
+  text-shadow: 2px 2px #37332f;
+  font-weight: 900;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  font-family: 'Abril Fatface', cursive;
+  margin-bottom: 2%;
+  letter-spacing: 4px;
+  min-width: 375px;
+}
+
+/* How the items are being displayed */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemDisplayContainer {
+  display: grid;
+  gap: 3em;
+  grid-template-columns: repeat(3, 1fr);
+  width: auto;
+  margin-right: 5px auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+/* ADD button style */
+.buttonContainer {
+  margin-right: 15%;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+}
+
+/* Change position of ADD button when screen is smaller than 400px */
+@media only screen and (max-width: 400px) {
+  .buttonContainer {
+    margin-right: 5px;
+    position: fixed;
+    bottom: 10px;
+  }
+}
+
+/* Change amount of columns to 2 for displaying items when screen is smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .itemDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Change amount of columns to 1 for displaying items when screen is smaller than 600x */
+@media only screen and (max-width: 600px) {
+  .itemDisplayContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

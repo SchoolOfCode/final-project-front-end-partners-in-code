@@ -1,7 +1,7 @@
 import Profile from '../Profile/Profile.js';
 import aboutUs from '../../libs/aboutUs.js';
 
-export default function ListItem() {
+export default function AboutUs() {
   return (
     <>
       {aboutUs.map(function (item) {
