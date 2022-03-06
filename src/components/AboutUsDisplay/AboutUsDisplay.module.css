@@ -4,7 +4,7 @@
 .displayContainer {
   width: auto;
   background-repeat: no-repeat;
-  background: url(../bg-images//flowers.jpeg);
+  background: url(../bg-images//leaf.jpeg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -79,8 +79,9 @@
   margin-left: 15px;
 }
 
-/* H1 about the Browse.... test */
-.browse {
+/* H1 for About Us test */
+.browse,
+.team {
   text-align: center;
   font-size: 3rem;
   color: #e6998d;
@@ -94,12 +95,18 @@
   min-width: 375px;
 }
 
+.team {
+  font-size: 2.5rem;
+  margin-bottom: 0%;
+}
+
 /* How the items are being displayed */
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .itemDisplayContainer {
   display: grid;
   gap: 3em;
@@ -108,23 +115,6 @@
   margin-right: 5px auto;
   margin-top: 2%;
   margin-bottom: 2%;
-}
-
-/* ADD button style */
-.buttonContainer {
-  margin-right: 15%;
-  position: fixed;
-  right: 0;
-  bottom: 10px;
-}
-
-/* Change position of ADD button when screen is smaller than 400px */
-@media only screen and (max-width: 400px) {
-  .buttonContainer {
-    margin-right: 5px;
-    position: fixed;
-    bottom: 10px;
-  }
 }
 
 /* Change amount of columns to 2 for displaying items when screen is smaller than 768px */

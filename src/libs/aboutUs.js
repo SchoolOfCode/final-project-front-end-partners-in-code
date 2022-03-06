@@ -2,8 +2,8 @@ const aboutUs = [
   {
     id: 1,
     image: {
-      img: './images/chair.jpg',
-      alt: 'Small grey chair',
+      img: './profile-images/name.jpg',
+      alt: "Niro's profile picture",
     },
     name: 'Niro Sarva',
     github: 'https://github.com/lunay-y',
@@ -23,8 +23,8 @@ const aboutUs = [
   {
     id: 3,
     image: {
-      img: './images/chair.jpg',
-      alt: 'Small grey chair',
+      img: './profile-images/name.jpg',
+      alt: "Alex's profile picture",
     },
     name: 'Alex Mulgrew',
     github: 'https://github.com/',
@@ -43,8 +43,8 @@ const aboutUs = [
   {
     id: 5,
     image: {
-      img: './images/chair.jpg',
-      alt: 'Small grey chair',
+      img: './profile-images/name.jpg',
+      alt: "Diego's profile picture",
     },
     name: 'Diego Russo',
     github: 'https://github.com/',
@@ -53,8 +53,8 @@ const aboutUs = [
   {
     id: 6,
     image: {
-      img: './images/chair.jpg',
-      alt: 'Small grey chair',
+      img: './profile-images/name.jpg',
+      alt: "Max's profile picture",
     },
     name: 'Max Muller',
     github: 'https://github.com/lunay-y',

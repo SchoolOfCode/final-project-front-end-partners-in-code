@@ -1,5 +1,6 @@
 import React from 'react';
 import H1 from '../Global/H1/H1.js';
+import H2 from '../Global/H2/H2.js';
 import AboutUs from '../AboutUs/AboutUs.js';
 import css from './AboutUsDisplay.module.css';
 import AuthenticationButton from '../Auth0/Auth0InOutButton/Auth0InOut.js';
@@ -34,6 +35,9 @@ export default function AboutUsDisplay() {
 
       <div className={css.browse}>
         <H1 text="About Us" />
+      </div>
+      <div className={css.team}>
+        <H2 text="Our Founders" />
       </div>
       <div className={css.section}>
         <div className={css.itemDisplayContainer}>
