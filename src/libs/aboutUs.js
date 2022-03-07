@@ -2,12 +2,12 @@ const aboutUs = [
   {
     id: 1,
     image: {
-      img: './profile-images/name.jpg',
+      img: './profile-images/niro.jpg',
       alt: "Niro's profile picture",
     },
     name: 'Niro Sarva',
-    github: 'https://github.com/lunay-y',
-    linkedin: 'https://www.linkedin.com/in/yuanlunayu/',
+    github: 'https://github.com/NiroSarva',
+    linkedin: 'https://www.linkedin.com/in/niro-sarva-73a498161/',
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const aboutUs = [
       img: './profile-images/luna.png',
       alt: "Luna's profile picture",
     },
-    name: 'Yuan Luna Yu',
+    name: 'Luna Yu',
     github: 'https://github.com/lunay-y',
     linkedin: 'https://www.linkedin.com/in/yuanlunayu/',
   },
