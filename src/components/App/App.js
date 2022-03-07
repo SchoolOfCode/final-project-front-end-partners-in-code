@@ -1,7 +1,7 @@
 import Homepage from '../Homepage/Homepage.js';
 import ContactPage from '../ContactPage/ContactPage';
 import { Routes, Route, Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemsDisplay from '../ItemsDisplay/ItemsDisplay.js';
 import items from '../../libs/items.js';
 import AboutUsDisplay from '../AboutUsDisplay/AboutUsDisplay.js';
@@ -9,13 +9,32 @@ import AboutUsDisplay from '../AboutUsDisplay/AboutUsDisplay.js';
 function App() {
   //this state keeps whole array of items
   const [updatedListItems, setupdatedListItems] = useState(items);
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    async function fetchData() {
+      const promise = await fetch(`https://reloved.herokuapp.com/items`);
+      const data = await promise.json();
+      setupdatedListItems(data);
+    }
+    fetchData();
+  }, [toggle]);
+
+  function handleClick() {
+    if (toggle) {
+      setToggle(false);
+    } else if (!toggle) {
+      setToggle(true);
+    }
+    console.log('working');
+  }
 
   //this function on click of the button, adds new item to the old item array
-  function handleClick(newItem) {
-    console.log(`handleClick run!`);
-    console.log(updatedListItems);
-    setupdatedListItems([newItem, ...updatedListItems]);
-  }
+  // function handleClick(newItem) {
+  //   console.log(`handleClick run!`);
+  //   console.log(updatedListItems);
+  //   setupdatedListItems([newItem, ...updatedListItems]);
+  // }
 
   return (
     <div className="App">

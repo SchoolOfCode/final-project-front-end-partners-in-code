@@ -21,7 +21,7 @@ export default function ContactPage() {
             <h2>Product Information</h2>
           </div>
           <div className={css.image}>
-            <img src={from.image.img} alt={from.image.alt} />
+            <img src={from.image} alt={from.product_name} />
           </div>
           <div className={css.description}>
             <h3>Product Description</h3>
@@ -30,7 +30,7 @@ export default function ContactPage() {
           <div className={css.boxContainer}>
             <div className={css.title}>
               <h3>Product Name</h3>
-              <p>{from.title}</p>
+              <p>{from.product_name}</p>
             </div>
             <div className={css.location}>
               <h3>Location</h3>
