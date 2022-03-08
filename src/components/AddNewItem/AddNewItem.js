@@ -31,35 +31,33 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //states for each of the input fields
   const [newProductName, setProductName] = useState('');
   const [newProductLocation, setProductLocation] = useState('');
-  const [newProductCondition, setProductCondition] = useState('');
+  const [newEmail, setEmail] = useState('');
   const [newProductDescription, setProductDescription] = useState('');
 
   //these track the value of the input fields
   const handleNameChange = (event) => setProductName(event.target.value);
   const handleLocationChange = (event) =>
     setProductLocation(event.target.value);
-  const handleConditionChange = (event) =>
-    setProductCondition(event.target.value);
+  const handleEmailChange = (event) => setEmail(event.target.value);
   const handleDescriptionChange = (event) =>
     setProductDescription(event.target.value);
 
   //DROPBOX
   const [url, setUrl] = useState('');
   function handleSuccess(files) {
-    setUrl(files[1]);
-   // console.log(url);
+    setUrl(files[0].thumbnailLink);
+    // console.log(url);
     console.log(files);
   }
- 
-   //this variable handles the structure(template) of our object item
-   const newItem = {
-    
-     title: newProductName,
-     location: newProductLocation,
-     image: url,
-     description: newProductDescription,
-   };
-   console.log(newItem)
+
+  //this variable handles the structure(template) of our object item
+  const newItem = {
+    title: newProductName,
+    location: newProductLocation,
+    image: url,
+    description: newProductDescription,
+  };
+  console.log(newItem);
 
   //ASYNC Function for posting the inputs state into the database API.
   async function postForm() {
@@ -68,12 +66,10 @@ export default function AddItemPopUp({ onAddNewItem }) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newItem),
-      
     });
   }
   console.log(url);
 
- 
   //sets the state for the modal (toggle)
   const { isOpen, onOpen, onClose } = useDisclosure();
   //sets the state (size) of the modal
@@ -163,48 +159,63 @@ export default function AddItemPopUp({ onAddNewItem }) {
                     success={handleSuccess}
                     cancel={() => console.log('closed')}
                     multiselect={true}
+                    linkType={'direct'}
                   >
-                    <button>Upload or Choose Files</button>
-                    <div className="dropbox"></div>
+                    <div className="dropbox">
+                      <Button
+                        bgColor="color.pink"
+                        borderRadius="25px"
+                        fontFamily="font.body"
+                        fontWeight="400"
+                      >
+                        Upload or Choose Files
+                      </Button>
+                    </div>
                     <img src={url} width="100" height="100" alt="" />
                   </DropboxChooser>
 
                   {/* product name input  */}
                   <FormControl>
-                    <FormLabel>Product Name</FormLabel>
+                    <FormLabel fontFamily="font.body">Product Name</FormLabel>
                     <Input
                       placeholder="Name of Your Product"
                       value={newProductName}
                       onChange={handleNameChange}
                       bgColor="white"
                       borderRadius="25px"
+                      fontFamily="font.body"
+                      fontWeight="400"
                     />
                   </FormControl>
                   {/* product location input */}
                   <FormControl mt={4}>
-                    <FormLabel>Location</FormLabel>
+                    <FormLabel fontFamily="font.body">Location</FormLabel>
                     <Input
                       placeholder="Product Location"
                       value={newProductLocation}
                       onChange={handleLocationChange}
                       bgColor="white"
                       borderRadius="25px"
+                      fontFamily="font.body"
+                      fontWeight="400"
                     />
                   </FormControl>
                   {/* product condition input */}
                   <FormControl mt={4}>
-                    <FormLabel>Condition</FormLabel>
+                    <FormLabel fontFamily="font.body">Email Address</FormLabel>
                     <Input
-                      placeholder="Product Condition"
-                      value={newProductCondition}
-                      onChange={handleConditionChange}
+                      placeholder="Email Address"
+                      value={newEmail}
+                      onChange={handleEmailChange}
                       bgColor="white"
                       borderRadius="25px"
+                      fontFamily="font.body"
+                      fontWeight="400"
                     />
                   </FormControl>
                   {/* product description input */}
                   <FormControl mt={4}>
-                    <FormLabel>Description</FormLabel>
+                    <FormLabel fontFamily="font.body">Description</FormLabel>
                     <Textarea
                       // to be used in the future
                       placeholder="Please, Describe Your Product"
@@ -212,6 +223,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
                       onChange={handleDescriptionChange}
                       bgColor="white"
                       borderRadius="25px"
+                      fontFamily="font.body"
+                      fontWeight="400"
                       //unused above this line to next breaker
                     />
                   </FormControl>
@@ -227,10 +240,10 @@ export default function AddItemPopUp({ onAddNewItem }) {
                     colorScheme="blue"
                     mr={3}
                     onClick={() => {
-                      //on clicking, this button does two things:
-                      onAddNewItem();
-                      postForm(); // 1) adds a new item to the existing array of items
-                      onClose(); // 2) closes the add item modal
+                      //on clicking, this button does three things:
+                      onAddNewItem(); // 1) switches the toggle to fetch data
+                      postForm(); // 2) adds a new item to the existing array of items
+                      onClose(); // 3) closes the add item modal
                     }}
                     color="black"
                     variant="ghost"
@@ -263,23 +276,21 @@ export default function AddItemPopUp({ onAddNewItem }) {
   }
 }
 
+//states for allowing image upload and rendering images in the application
+// const [images, setImages] = useState([]);
+// const [imageURLs, setImageURLs] = useState([]);
 
- //states for allowing image upload and rendering images in the application
-  // const [images, setImages] = useState([]);
-  // const [imageURLs, setImageURLs] = useState([]);
+//use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
+// useEffect(() => {
+//   if (images.length < 1) return;
+//   const newImageUrls = [];
+//   //if there are images within bounds, start adding them to a temporary array to collect those URL strings
+//   images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
+//   //Please note, on page reload or on re-render these strings will have to be re-built
+//   setImageURLs(newImageUrls);
+// }, [images]);
 
-  //use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
-  // useEffect(() => {
-  //   if (images.length < 1) return;
-  //   const newImageUrls = [];
-  //   //if there are images within bounds, start adding them to a temporary array to collect those URL strings
-  //   images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
-  //   //Please note, on page reload or on re-render these strings will have to be re-built
-  //   setImageURLs(newImageUrls);
-  // }, [images]);
-
-  // access the files through the event object and then store them in our state
-  // function onImageChange(e) {
-  //   setImages([...e.target.files]);
-  // }
-
+// access the files through the event object and then store them in our state
+// function onImageChange(e) {
+//   setImages([...e.target.files]);
+// }
