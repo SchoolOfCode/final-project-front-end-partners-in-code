@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import style from './AddNewItem.module.css';
 
 import {
@@ -19,7 +19,11 @@ import {
 import { useAuth0 } from '@auth0/auth0-react';
 import Auth0LoginButton from '../Auth0/Auth0LoginButton/Auth0Login';
 
-import UploadImages from '../ImageUpload/ImageUpload.js';
+// import UploadImages from '../ImageUpload/ImageUpload.js';
+
+import DropboxChooser from 'react-dropbox-chooser';
+
+const APP_KEY = 'njr7zjs0q6taanq';
 
 export default function AddItemPopUp({ onAddNewItem }) {
   const { isAuthenticated } = useAuth0();
@@ -39,24 +43,31 @@ export default function AddItemPopUp({ onAddNewItem }) {
   const handleDescriptionChange = (event) =>
     setProductDescription(event.target.value);
 
+  //DROPBOX
+  const [url, setUrl] = useState('');
+  function handleSuccess(files) {
+    setUrl(files[0].thumbnailLink);
+    console.log(url);
+  }
+
   //states for allowing image upload and rendering images in the application
-  const [images, setImages] = useState([]);
-  const [imageURLs, setImageURLs] = useState([]);
+  // const [images, setImages] = useState([]);
+  // const [imageURLs, setImageURLs] = useState([]);
 
   //use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
-  useEffect(() => {
-    if (images.length < 1) return;
-    const newImageUrls = [];
-    //if there are images within bounds, start adding them to a temporary array to collect those URL strings
-    images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
-    //Please note, on page reload or on re-render these strings will have to be re-built
-    setImageURLs(newImageUrls);
-  }, [images]);
+  // useEffect(() => {
+  //   if (images.length < 1) return;
+  //   const newImageUrls = [];
+  //   //if there are images within bounds, start adding them to a temporary array to collect those URL strings
+  //   images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
+  //   //Please note, on page reload or on re-render these strings will have to be re-built
+  //   setImageURLs(newImageUrls);
+  // }, [images]);
 
   // access the files through the event object and then store them in our state
-  function onImageChange(e) {
-    setImages([...e.target.files]);
-  }
+  // function onImageChange(e) {
+  //   setImages([...e.target.files]);
+  // }
 
   // //function to generate random number and store in variable
   // function randomIdNumber() {
@@ -151,10 +162,29 @@ export default function AddItemPopUp({ onAddNewItem }) {
                 {/* Modal body */}
                 <ModalBody>
                   {/* Upload images button */}
-                  <UploadImages
+                  {/* <UploadImages
                     onImageChange={onImageChange}
                     imageURLs={imageURLs}
-                  />
+                  /> */}
+                  <h1 style={{ textAlign: 'center' }}>
+                    Upload Or Choose Files to DropBox
+                  </h1>
+                  <br />
+                  <br />
+
+                  <DropboxChooser
+                    appKey={APP_KEY}
+                    success={handleSuccess}
+                    cancel={() => console.log('closed')}
+                    multiselect={true}
+                  >
+                    <button>Upload or Choose Files</button>
+                    <div className="dropbox"></div>
+                    <br />
+                    <br />
+                    <img src={url} width="200" height="200" alt="" />
+                  </DropboxChooser>
+
                   {/* product name input  */}
                   <FormControl>
                     <FormLabel>Product Name</FormLabel>
