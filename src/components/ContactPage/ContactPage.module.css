@@ -2,14 +2,22 @@
 /* background and whole page */
 .contactContainer {
   width: auto;
+  margin: auto;
   background-repeat: no-repeat;
   background: url(../bg-images//flowers.jpeg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
-  padding-bottom: 9em;
+  max-height: 100vh;
+  /* background-attachment: fixed; */
+  /* margin-bottom: 0em; */
+}
+
+@media screen and (max-height: 1700px) {
+  .contactContainer {
+    padding-bottom: 50em;
+  }
 }
 /* Back to Browser Link */
 .backButton {
@@ -63,7 +71,7 @@
   flex-wrap: wrap;
 }
 
-/* if the size of the screen is smaller than 785px, the .boxContainer 
+/* if the size of the screen is smaller than 810px, the .boxContainer 
     will make Product Name, Location, Phone, Email flex into 1 column  */
 @media (max-width: 810px) {
   .boxContainer {
@@ -94,9 +102,10 @@
 
 .image img {
   width: 18vw;
-  min-width: 200px;
-  max-width: 200px;
-  height: 35vh;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 55vh;
+  /* min-height: 55vh; */
   padding: none;
   margin: 10px 0 10px 0;
 }
