@@ -46,48 +46,34 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //DROPBOX
   const [url, setUrl] = useState('');
   function handleSuccess(files) {
-    setUrl(files[0].thumbnailLink);
-    console.log(url);
+    setUrl(files[1]);
+   // console.log(url);
+    console.log(files);
   }
+ 
+   //this variable handles the structure(template) of our object item
+   const newItem = {
+    
+     title: newProductName,
+     location: newProductLocation,
+     image: url,
+     description: newProductDescription,
+   };
+   console.log(newItem)
 
-  //states for allowing image upload and rendering images in the application
-  // const [images, setImages] = useState([]);
-  // const [imageURLs, setImageURLs] = useState([]);
+  //ASYNC Function for posting the inputs state into the database API.
+  async function postForm() {
+    const url = 'https://reloved.herokuapp.com/items';
+    await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newItem),
+      
+    });
+  }
+  console.log(url);
 
-  //use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
-  // useEffect(() => {
-  //   if (images.length < 1) return;
-  //   const newImageUrls = [];
-  //   //if there are images within bounds, start adding them to a temporary array to collect those URL strings
-  //   images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
-  //   //Please note, on page reload or on re-render these strings will have to be re-built
-  //   setImageURLs(newImageUrls);
-  // }, [images]);
-
-  // access the files through the event object and then store them in our state
-  // function onImageChange(e) {
-  //   setImages([...e.target.files]);
-  // }
-
-  // //function to generate random number and store in variable
-  // function randomIdNumber() {
-  //   return Math.floor(Math.random() * (1000 - 12)) + 12;
-  // }
-
-  // let temporaryId = randomIdNumber();
-
-  // //this variable handles the structure(template) of our object item
-  // const newItem = {
-  //   itemId: temporaryId,
-  //   title: newProductName,
-  //   location: newProductLocation,
-  //   image: {
-  //     img: imageURLs,
-  //     alt: newProductName,
-  //   },
-  //   description: newProductDescription,
-  // };
-
+ 
   //sets the state for the modal (toggle)
   const { isOpen, onOpen, onClose } = useDisclosure();
   //sets the state (size) of the modal
@@ -242,7 +228,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
                     mr={3}
                     onClick={() => {
                       //on clicking, this button does two things:
-                      onAddNewItem(); // 1) adds a new item to the existing array of items
+                      onAddNewItem();
+                      postForm(); // 1) adds a new item to the existing array of items
                       onClose(); // 2) closes the add item modal
                     }}
                     color="black"
@@ -275,3 +262,24 @@ export default function AddItemPopUp({ onAddNewItem }) {
     );
   }
 }
+
+
+ //states for allowing image upload and rendering images in the application
+  // const [images, setImages] = useState([]);
+  // const [imageURLs, setImageURLs] = useState([]);
+
+  //use useEffect to look for changes in our images array, and when it detects a change first we want to see if there are images to convert into strings
+  // useEffect(() => {
+  //   if (images.length < 1) return;
+  //   const newImageUrls = [];
+  //   //if there are images within bounds, start adding them to a temporary array to collect those URL strings
+  //   images.forEach((image) => newImageUrls.push(URL.createObjectURL(image))); // <- //createObjectURL: takes in an image object and then returns a string of a temporary local source for that image
+  //   //Please note, on page reload or on re-render these strings will have to be re-built
+  //   setImageURLs(newImageUrls);
+  // }, [images]);
+
+  // access the files through the event object and then store them in our state
+  // function onImageChange(e) {
+  //   setImages([...e.target.files]);
+  // }
+
