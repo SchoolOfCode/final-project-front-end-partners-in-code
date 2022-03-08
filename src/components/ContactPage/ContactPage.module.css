@@ -8,8 +8,14 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
-  padding-bottom: 9em;
+  /* background-attachment: fixed; */
+  margin-bottom: 30em;
+}
+
+@media screen and (max-height: 1700px) {
+  .contactContainer {
+    padding-bottom: 50em;
+  }
 }
 /* Back to Browser Link */
 .backButton {
@@ -63,7 +69,7 @@
   flex-wrap: wrap;
 }
 
-/* if the size of the screen is smaller than 785px, the .boxContainer 
+/* if the size of the screen is smaller than 810px, the .boxContainer 
     will make Product Name, Location, Phone, Email flex into 1 column  */
 @media (max-width: 810px) {
   .boxContainer {

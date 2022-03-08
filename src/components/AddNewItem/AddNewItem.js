@@ -58,24 +58,24 @@ export default function AddItemPopUp({ onAddNewItem }) {
     setImages([...e.target.files]);
   }
 
-  //function to generate random number and store in variable
-  function randomIdNumber() {
-    return Math.floor(Math.random() * (1000 - 12)) + 12;
-  }
+  // //function to generate random number and store in variable
+  // function randomIdNumber() {
+  //   return Math.floor(Math.random() * (1000 - 12)) + 12;
+  // }
 
-  let temporaryId = randomIdNumber();
+  // let temporaryId = randomIdNumber();
 
-  //this variable handles the structure(template) of our object item
-  const newItem = {
-    itemId: temporaryId,
-    title: newProductName,
-    location: newProductLocation,
-    image: {
-      img: imageURLs,
-      alt: newProductName,
-    },
-    description: newProductDescription,
-  };
+  // //this variable handles the structure(template) of our object item
+  // const newItem = {
+  //   itemId: temporaryId,
+  //   title: newProductName,
+  //   location: newProductLocation,
+  //   image: {
+  //     img: imageURLs,
+  //     alt: newProductName,
+  //   },
+  //   description: newProductDescription,
+  // };
 
   //sets the state for the modal (toggle)
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -214,7 +214,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
                     mr={3}
                     onClick={() => {
                       //on clicking, this button does two things:
-                      onAddNewItem(newItem); // 1) adds a new item to the existing array of items
+                      onAddNewItem(); // 1) adds a new item to the existing array of items
                       onClose(); // 2) closes the add item modal
                     }}
                     color="black"
