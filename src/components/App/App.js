@@ -15,7 +15,7 @@ function App() {
     async function fetchData() {
       const promise = await fetch(`https://reloved.herokuapp.com/items`);
       const data = await promise.json();
-      setupdatedListItems(data);
+      setupdatedListItems(data.payload);
     }
     fetchData();
   }, [toggle]);

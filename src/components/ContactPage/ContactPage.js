@@ -25,7 +25,7 @@ export default function ContactPage() {
           </div>
           <div className={css.description}>
             <h3>Product Description</h3>
-            <p>{from.description}</p>
+            <p>{from.product_description}</p>
           </div>
           <div className={css.boxContainer}>
             <div className={css.title}>
@@ -38,11 +38,11 @@ export default function ContactPage() {
             </div>
             <div className={css.phone}>
               <h3>Phone Number</h3>
-              <p>{from.phone}</p>
+              <p>{from.phone_number}</p>
             </div>
             <div className={css.email}>
               <h3>E-mail</h3>
-              <p>{from.email}</p>
+              <p>{from.email_address}</p>
             </div>
           </div>
         </div>

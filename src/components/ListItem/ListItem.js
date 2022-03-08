@@ -27,10 +27,10 @@ export default function ListItem({ items }) {
           return (
             <div>
               <Item
-                key={item.itemId}
-                img={item.image.img}
-                alt={item.alt}
-                title={item.title}
+                key={item.id}
+                img={item.image}
+                alt={item.product_name}
+                title={item.product_name}
                 location={item.location}
               />
             </div>
