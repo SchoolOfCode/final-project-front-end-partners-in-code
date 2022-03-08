@@ -166,11 +166,11 @@ export default function AddItemPopUp({ onAddNewItem }) {
                     onImageChange={onImageChange}
                     imageURLs={imageURLs}
                   /> */}
-                  <h1 style={{ textAlign: 'center' }}>
+                  {/* <h1 style={{ textAlign: 'center' }}>
                     Upload Or Choose Files to DropBox
                   </h1>
                   <br />
-                  <br />
+                  <br /> */}
 
                   <DropboxChooser
                     appKey={APP_KEY}
@@ -180,9 +180,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
                   >
                     <button>Upload or Choose Files</button>
                     <div className="dropbox"></div>
-                    <br />
-                    <br />
-                    <img src={url} width="200" height="200" alt="" />
+                    <img src={url} width="100" height="100" alt="" />
                   </DropboxChooser>
 
                   {/* product name input  */}
