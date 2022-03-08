@@ -45,7 +45,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   //DROPBOX
   const [url, setUrl] = useState('');
   function handleSuccess(files) {
-    setUrl(files[0].thumbnailLink);
+    setUrl(files[0].link);
     // console.log(url);
     console.log(files);
   }
@@ -55,6 +55,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
     title: newProductName,
     location: newProductLocation,
     image: url,
+    email: newEmail,
     description: newProductDescription,
   };
   console.log(newItem);
@@ -161,16 +162,15 @@ export default function AddItemPopUp({ onAddNewItem }) {
                     multiselect={true}
                     linkType={'direct'}
                   >
-                    <div className="dropbox">
-                      <Button
-                        bgColor="color.pink"
-                        borderRadius="25px"
-                        fontFamily="font.body"
-                        fontWeight="400"
-                      >
-                        Upload or Choose Files
-                      </Button>
-                    </div>
+                    <Button
+                      bgColor="color.pink"
+                      borderRadius="25px"
+                      fontFamily="font.body"
+                      fontWeight="400"
+                    >
+                      Upload or Choose Files
+                    </Button>
+
                     <img src={url} width="100" height="100" alt="" />
                   </DropboxChooser>
 
