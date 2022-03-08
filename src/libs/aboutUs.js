@@ -23,12 +23,12 @@ const aboutUs = [
   {
     id: 3,
     image: {
-      img: './profile-images/name.jpg',
+      img: './profile-images/alex.jpg',
       alt: "Alex's profile picture",
     },
     name: 'Alex Mulgrew',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/',
+    github: 'https://github.com/apmcoding',
+    linkedin: 'https://www.linkedin.com/alexmulgrew',
   },
   {
     id: 4,
