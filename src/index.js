@@ -38,7 +38,7 @@ ReactDOM.render(
         domain="dev-f39gzy2t.eu.auth0.com"
         clientId="bNfd19UTo8TdI3MaomRZscw1aw2DhrJF"
         // redirectUri={window.location.origin} //original redirect code
-        //redirectUri="http://localhost:3000/items" // this rediredcts to localhost once logged in
+        // redirectUri="http://localhost:3000/items" // this rediredcts to localhost once logged in
         redirectUri="https://reloved.netlify.app/items"
       >
         <App />

@@ -53,12 +53,12 @@ const aboutUs = [
   {
     id: 6,
     image: {
-      img: './profile-images/name.jpg',
+      img: './profile-images/MaxMullerProfile.jpg',
       alt: "Max's profile picture",
     },
     name: 'Max Muller',
-    github: 'https://github.com/lunay-y',
-    linkedin: 'https://www.linkedin.com/in/yuanlunayu/',
+    github: 'https://github.com/mmuller2',
+    linkedin: 'https://www.linkedin.com/in/max-muller-44a372178',
   },
 ];
 
