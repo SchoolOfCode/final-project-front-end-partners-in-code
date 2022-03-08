@@ -44,7 +44,7 @@ function App() {
         <Route
           path="/items"
           element={
-            <ItemsDisplay items={updatedListItems} onAddNewItem={handleClick} />
+            <ItemsDisplay items={updatedListItems.reverse()} onAddNewItem={handleClick} />
           }
         />
         <Route path="/about-us" element={<AboutUsDisplay />} />

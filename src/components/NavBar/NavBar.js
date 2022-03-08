@@ -4,6 +4,7 @@ import {
   StarIcon,
   InfoIcon,
   InfoOutlineIcon,
+   SearchIcon,
   SunIcon,
   EmailIcon,
   ArrowForwardIcon,
@@ -46,6 +47,12 @@ export default function NavBar() {
             >
               Homepage
             </MenuItem>
+          </Link>
+          <Link to="/items">
+          <MenuItem icon={<SearchIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
+            {' '}
+            Browse
+          </MenuItem>
           </Link>
           <MenuItem icon={<InfoIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
             {' '}
