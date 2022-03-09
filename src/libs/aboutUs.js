@@ -43,7 +43,7 @@ const aboutUs = [
   {
     id: 5,
     image: {
-      img: './profile-images/name.jpg',
+      img: './profile-images/diego.jpg',
       alt: "Diego's profile picture",
     },
     name: 'Diego Russo',
