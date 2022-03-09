@@ -23,3 +23,8 @@
   right: 0;
   bottom: 10px;
 }
+
+.dropboxChooser {
+  border: none;
+  background-color: #fcefdb;
+}
