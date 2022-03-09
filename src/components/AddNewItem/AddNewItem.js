@@ -154,7 +154,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
                   </h1>
                   <br />
                   <br /> */}
-
+                  <div className={style.dropboxChooser}>
                   <DropboxChooser
                     appKey={APP_KEY}
                     success={handleSuccess}
@@ -173,6 +173,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
 
                     <img src={url} width="100" height="100" alt="" />
                   </DropboxChooser>
+                  </div>
 
                   {/* product name input  */}
                   <FormControl>
