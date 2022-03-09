@@ -31,6 +31,9 @@ function Homepage() {
             <Auth0LogoutButton /> */}
               {/* the login and log out buttons replaced by the line below */}
               <AuthenticationButton />
+                <div className={css.navBar}>
+            <NavBar />
+          </div>
             </div>
             {/* <div className={css.signUpButton}>
               <Button text="Sign Up" />
@@ -60,9 +63,6 @@ function Homepage() {
               </div>
             </Link>
           </div>
-          <div className={css.navBar}>
-            <NavBar />
-          </div>
         </div>
       </div>
     );
@@ -83,11 +83,15 @@ function Homepage() {
             <Auth0LogoutButton /> */}
               {/* the login and log out buttons replaced by the line below */}
               <AuthenticationButton />
+            
             </div>
             <div className={css.signUpButton}>
               {/* <Button text="Sign Up" /> */}
               <SignupButton />
             </div>
+            <div className={css.navBar}>
+            <NavBar />
+          </div>
           </div>
         </div>
         <div className={css.h1}>
