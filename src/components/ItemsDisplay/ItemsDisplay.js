@@ -8,6 +8,7 @@ import SignupButton from '../Auth0/Auth0SignUpButton/Auth0SignUp.js';
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar.js';
 import { useAuth0 } from '@auth0/auth0-react';
+import AlertPopUp from '../AlertPopUp/AlertPopUp.js';
 
 export default function ItemsDisplay({ items, onAddNewItem }) {
   const { isAuthenticated } = useAuth0();
@@ -72,6 +73,11 @@ export default function ItemsDisplay({ items, onAddNewItem }) {
         </div>
         <div className={css.browse}>
           <H1 text="Browse..." />
+        </div>
+        <div className={css.alert}>
+          <div className={css.alertContainer}>
+            <AlertPopUp />
+          </div>
         </div>
         <div className={css.section}>
           <div className={css.itemDisplayContainer}>
