@@ -94,11 +94,6 @@
   min-width: 375px;
 }
 
-.alert {
-  justify-content: center;
-  display: flex;
-}
-
 /* How the items are being displayed */
 .section {
   display: flex;

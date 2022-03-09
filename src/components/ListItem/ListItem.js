@@ -4,6 +4,10 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 export default function ListItem({ items }) {
   const { isAuthenticated } = useAuth0();
+
+  function handleAlert() {
+    alert('Please Log In or Sign Up to see product details.');
+  }
   return (
     <>
       {items.map(function (item) {
@@ -23,7 +27,7 @@ export default function ListItem({ items }) {
           );
         } else {
           return (
-            <div>
+            <div onClick={handleAlert} style={{ cursor: 'pointer' }}>
               <Item
                 key={item.id}
                 img={item.image}
