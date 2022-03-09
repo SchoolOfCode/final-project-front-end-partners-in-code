@@ -17,7 +17,7 @@ const aboutUs = [
     },
     name: 'Sandra Skolarczyk',
     github:
-      'https://github.com/sandiskolarczyk?tab=overview&from=2022-03-01&to=2022-03-04',
+      ' https://github.com/sandiskolarczyk',
     linkedin: 'https://www.linkedin.com/in/sandraskolarczyk/',
   },
   {
@@ -47,8 +47,8 @@ const aboutUs = [
       alt: "Diego's profile picture",
     },
     name: 'Diego Russo',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/',
+    github: 'https://github.com/DEGRUSSECU1',
+    linkedin: 'https://www.linkedin.com/in/diego-russo-38989b133/',
   },
   {
     id: 6,
