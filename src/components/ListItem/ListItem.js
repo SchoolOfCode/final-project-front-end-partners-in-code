@@ -4,6 +4,10 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 // const { isAuthenticated } = useAuth0();
 export default function ListItem({ items }) {
+  function alertPopup() {
+    console.log('alert');
+    alert('hi');
+  }
   console.log(items);
   const { isAuthenticated } = useAuth0();
   return (
@@ -25,7 +29,7 @@ export default function ListItem({ items }) {
           );
         } else {
           return (
-            <div>
+            <div onClick={alertPopup}>
               <Item
                 key={item.id}
                 img={item.image}
