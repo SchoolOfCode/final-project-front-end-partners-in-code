@@ -3,6 +3,8 @@
 This is a fullstack web app created using all the skills we as a team have attained throughout our time at the School of Code.
 The purpose behind the app is to increase recycling, by getting members 
 
+   app demo : ![picture alt](http://via.placeholder.com/200x150 "Title is optional")
+https://drive.google.com/file/d/1-T73E1EJ78xR96Hv7YflMcRRz5jKLrGO/view?usp=sharing
 
 ## Table of Contents
 
@@ -12,8 +14,6 @@ The purpose behind the app is to increase recycling, by getting members
 - Features
 - API Routes 
 - Design
-
-
 
 ## The Problem Our App is Solving
 
