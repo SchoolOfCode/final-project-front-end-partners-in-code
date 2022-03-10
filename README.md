@@ -9,7 +9,7 @@ This App provides a platform that allows the user through a REST API to perform 
 # :recycle:Motivation
 
 Our motivations for developing the app was to apply all the knowledge acquired over our time learning at the School of Code and testing our knowledge Working in a team of six  to deliver the app within the time given by implementing agile software development methodologist. Also developing valuable software that aims to contribute to minimize one of the main problems for global environment that is the problem of consumption.
-## The Problem 
+## :interrobang: The Problem 
 
 We live in a world where as each day or year goes by, the planet we live in is being destroyed by the millions of tonnes of waste that could instead be recycled. 
 Our goal is to help make our world a more sustainable place, and we are doing that by helping our users exchange and give away free items that they would otherwise throw away. 
@@ -33,10 +33,42 @@ DropBox       | DropBox
 Chakra-UI     | 
 
 ## :dvd: App Installation
-# :file_folder: Features
+
+:iphone: For the front end repository 
 
 Make a project directory, clone this repository and initialise the project.
 This will install all the necesary packages to run the frontend in your local machine.
+
+* :one: ` cd into the project directory folder created before`
+* :two: git clone https://github.com/SchoolOfCode/final-project-front-end-partners-in-code.git`
+* :three: `npm install `
+* :four: `npm start `
+
+:wrench: For the back end repository 
+
+Before run the app you will need to provide the data to connect to your database in the .env file.The app provides an example file with the structure. This app uses a postgresql database. You can create one online for free in Heroku or install postgresql in your computer. Once you have your database created,run the next scripts to create the table and populate the data:
+
+This [Heroku ](https://www.heroku.com/ "Heroku") link will take you to Heroku website where you can create your database.
+
+Create another project directory, clones this repository and initialise the project.
+* :one: ` cd into the project directory folder created before `
+* :two: git clone https://github.com/SchoolOfCode/final-project-api-partners-in-code.git`
+* :three: `npm install `
+* :four: `add your Heroku information to a .env file where your will link your database to the project `
+~~~
+*Create a table items into the database
+
+  `npm run db:createusers`
+//Will create an empty table in your database with all the variables needed for the app.
+  `npm run db:populateItems`
+//Will insert mock data into the database.This data is store in a file in db/libs/items.js
+  `npm run db:truncateTable`
+//Will delete all the contents of the table. 
+  `npm run db:dropTable`
+//Will delete the table and all its contents. 
+~~~
+
+# :file_folder: Features
 
 #### Authentication 
 User Authentication through the implementation of Auth0.
