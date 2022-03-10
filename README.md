@@ -1,85 +1,60 @@
-# The Front End Project Example
+# ReLoved.
 
-Some starter code to get you up and running quickly.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cwissy/examples_front-end-project-week)
-
-## For Deploying
-
-Make sure to set the `REACT_APP_API_URL` to be the url of your api. If you're deploying as part of the full project example, it will be from the [project week back end](https://github.com/cwissy/examples_back-end-project-week).
-
-## Guide
-
-[You can find the guide in this Google Doc](https://docs.google.com/document/d/1-8q034OBs1GMuMSMYuUYrpAEg37zh8qBMCOBcJoQamk/edit?usp=sharing)
+This is a fullstack web app created using all the skills we as a team have attained throughout our time at the School of Code.
+The purpose behind the app is to increase recycling, by getting members 
 
 
-## Getting Started with Create React App
+## Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- What Problem our app is Solving
+- Tech Stack
+- App Installation
+- Features
+- API Routes 
+- Design
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## The Problem Our App is Solving
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+We live in a world where as each day or year goes by, the planet we live in is being destroyed by the millions of tonnes of waste that could instead be recycled. 
+Our goal is to help make our world a more sustainable place, and we are doing that by helping our users exchange and give away free items that they would otherwise throw away. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+Below is all the tools we used for this project;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Front-end:** React, CSS, Auth0, DropBox, Chakra-UI
 
-### `npm run build`
+**Back-end:** Node, Express, Heroku, PostgreSQL, DropBox
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Front-end     | Back-end
+------------- | -------------
+React         | Node.js
+CSS           | Heroku
+Auth0         | PostgreSQL
+DropBox       | DropBox
+Chakra-UI     | 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## App Installation
+# Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Authentication 
+User Authentication through Auth0 
 
-### `npm run eject`
+#### Create Items
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Alerts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+####
+## API Routes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- - (GET) Returns HomePage: localhost:3000  -->
+- (GET) Returns All Items: localhost:3000/
+- (GET) Returns Item by ID: localhost:3000/:id 
+- (POST) Creates new item in the database: localhost:3000/
+## Design
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This [Figma ](https://www.figma.com/file/4a4pAmlYiymqzVMmP4yP0t/Partners-in-Code?node-id=0%3A1 "Figma") link will take you to our high-fidelity wire framework.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
