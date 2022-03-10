@@ -70,31 +70,22 @@ Create another project directory, clones this repository and initialise the proj
 
 # :file_folder: Features
 
-#### Authentication 
+* :closed_lock_with_key: Authentication 
 User Authentication through the implementation of Auth0. Auth0 denies the user the ability to post items or look up product information if they are not logged in - they must log in or sign up to be able to do those things.
 
-#### Create Items
+* :new: Create Items
 This feature is shown as the + icon on the browse page. It allows the user to upload a product that they wish to give away or exhange!
 
-#### Alerts
+![demo](public/gifmodal/modal.gif "reloved demo" )
+
+* :warning: Alerts
 An alert pops up at the top of the browser when a user that is not logged in or registered tries to view or upload an item.  
 
-####
 ## :twisted_rightwards_arrows: API Routes
 
 <!-- - (GET) Returns HomePage: localhost:3000  -->
 - (GET) Returns All Items: localhost:3000/
 - (GET) Returns Item by ID: localhost:3000/:id 
 - (POST) Creates new item in the database: localhost:3000/
-
-
-## Table of Contents
-
-- What Problem our app is Solving
-- Tech Stack
-- App Installation
-- Features
-- API Routes 
-- Design
 
 
