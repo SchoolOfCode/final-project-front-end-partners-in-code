@@ -4,7 +4,7 @@ This is a fullstack web app created using all the skills we as a team have attai
 The purpose behind the app is to increase recycling, by getting members 
 
 Inline-style: 
-![alt text](public/gif/reloved.gif "Logo Title Text 1")
+![demo](public/gif/reloved.gif "reloved demo")
 
 
 
