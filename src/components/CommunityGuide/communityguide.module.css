@@ -4,7 +4,7 @@
 .displayContainer {
   width: auto;
   background-repeat: no-repeat;
-  background: url(../bg-images//flowers.jpeg);
+  background: url(https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -83,8 +83,8 @@
 .browse {
   text-align: center;
   font-size: 3rem;
-  color: #e6998d;
-  text-shadow: 2px 2px #37332f;
+  color: #64847c;
+  /* text-shadow: 2px 2px #37332f; */
   font-weight: 900;
   width: 100%;
   margin: 0px 0px 0px 0px;
@@ -95,7 +95,7 @@
 }
 
 .background {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid;
   padding: 1.7em 1.7em 1em 1.7em;
   box-shadow: 5px 5px #888888;
@@ -136,5 +136,6 @@
   font-family: 'Abril Fatface', sans-serif;
   text-align: justify;
   margin-bottom: 10px;
-  font-size: large;
+  font-weight: 300;
+  font-size: 0.8em;
 }

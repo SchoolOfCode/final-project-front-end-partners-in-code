@@ -119,6 +119,22 @@
 .heading {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  text-align: justify;
+}
+
+.p p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  margin-bottom: 10px;
+  border-bottom: 1.5px solid #a4ccae;
+  padding-bottom: 8px;
+}
+
+.h2 {
+  font-family: 'Abril Fatface', sans-serif;
+  text-align: justify;
+  margin-bottom: 10px;
+  font-size: 0.9em;
 }
