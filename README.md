@@ -8,7 +8,7 @@ This app provides a platform that allows the user through a REST API to perform 
 
 # :recycle:Motivation
 
-Our motivations for developing the app was to apply all the knowledge acquired over our time learning at the School of Code and testing our knowledge Working in a team of six  to deliver the app within the time given by implementing agile software development methodologist. Also developing valuable software that aims to contribute to minimize one of the main problems for global environment that is the problem of consumption - with this app we are encouraging more people to recycle their used items.
+Our motivations for developing the app was to apply all the knowledge acquired over our time learning at the School of Code and testing our knowledge working in a team of six  to deliver the app within the time given by implementing agile software development methodology. Also developing valuable software that aims to contribute to minimize one of the main problems for global environment that is the problem of consumption - with this app we are encouraging more people to recycle their used items.
 
 ## :interrobang: The Problem 
 
