@@ -3,13 +3,9 @@
 This is a fullstack web app created using all the skills we as a team have attained throughout our time at the School of Code.
 The purpose behind the app is to increase recycling, by getting members 
 
-_Image with alt :_
+Inline-style: 
+![alt text](https://drive.google.com/file/d/1-T73E1EJ78xR96Hv7YflMcRRz5jKLrGO/view?usp=sharing "Logo Title Text 1")
 
-![picture alt]
-https://drive.google.com/file/d/1-T73E1EJ78xR96Hv7YflMcRRz5jKLrGO/view?usp=sharing "Title is optional")
-
-    Markup : ![picture alt](
-https://drive.google.com/file/d/1-T73E1EJ78xR96Hv7YflMcRRz5jKLrGO/view?usp=sharing "Title is optional")
 
 
 
