@@ -71,14 +71,16 @@ Create another project directory, clones this repository and initialise the proj
 # :file_folder: Features
 
 #### Authentication 
-User Authentication through the implementation of Auth0.
+User Authentication through the implementation of Auth0. Auth0 denies the user the ability to post items or look up product information if they are not logged in - they must log in or sign up to be able to do those things.
 
 #### Create Items
+This feature is shown as the + icon on the browse page. It allows the user to upload a product that they wish to give away or exhange!
 
 #### Alerts
+An alert pops up at the top of the browser when a user that is not logged in or registered tries to view or upload an item.  
 
 ####
-## API Routes
+## :twisted_rightwards_arrows: API Routes
 
 <!-- - (GET) Returns HomePage: localhost:3000  -->
 - (GET) Returns All Items: localhost:3000/
