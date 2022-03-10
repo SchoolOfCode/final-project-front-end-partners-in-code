@@ -1,10 +1,17 @@
 # ReLoved.
 
-This is a fullstack web app created using all the skills we as a team have attained throughout our time at the School of Code.
-The purpose behind the app is to increase recycling, by getting members 
+This App provides a platform that allows the user through a REST API to perform CRUD operations such as (create, read, update, delete) . The frontEnd will serve the information and allow you to display the new data created by the user with styled components using React.js components styled with CSS.
 
 ![demo](public/gif/reloved.gif "reloved demo" )
 
+# Motivation
+The purpose behind the app is to increase recycling, by getting members 
+This is a fullstack web app created using all the skills we as a team have attained throughout our time at the School of Code.
+The purpose behind the app is to increase recycling, by getting members 
+
+## Design
+
+This [Figma ](https://www.figma.com/file/4a4pAmlYiymqzVMmP4yP0t/Partners-in-Code?node-id=0%3A1 "Figma") link will take you to our high-fidelity wire framework.
 ## Table of Contents
 
 - What Problem our app is Solving
@@ -27,7 +34,7 @@ Below is all the tools we used for this project;
 
 **Back-end:** Node, Express, Heroku, PostgreSQL, DropBox
 
-Front-end     | Back-end
+Front-end     | Back-end     
 ------------- | -------------
 React         | Node.js
 CSS           | Heroku
@@ -39,7 +46,7 @@ Chakra-UI     |
 # Features
 
 #### Authentication 
-User Authentication through Auth0 
+User Authentication through the implementation of Auth0.
 
 #### Create Items
 
@@ -52,8 +59,6 @@ User Authentication through Auth0
 - (GET) Returns All Items: localhost:3000/
 - (GET) Returns Item by ID: localhost:3000/:id 
 - (POST) Creates new item in the database: localhost:3000/
-## Design
 
-This [Figma ](https://www.figma.com/file/4a4pAmlYiymqzVMmP4yP0t/Partners-in-Code?node-id=0%3A1 "Figma") link will take you to our high-fidelity wire framework.
 
 
