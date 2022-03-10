@@ -4,7 +4,7 @@
 .displayContainer {
   width: auto;
   background-repeat: no-repeat;
-  background: url(../bg-images//flowers.jpeg);
+  background: url(https://images.unsplash.com/photo-1612538946893-033c6bb7060c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -98,11 +98,13 @@
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid;
   padding: 1.7em 1.7em 1em 1.7em;
-  box-shadow: 5px 5px #888888;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  box-shadow: 5px 5px #64847c;
+  margin-left: 15vw;
+  margin-right: 15vw;
   display: flex;
   justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 /* Div within the whole of the white box (.background) */
 .headingContainer {
@@ -122,19 +124,31 @@
   justify-content: flex-start;
   align-items: center;
   text-align: justify;
+  flex-direction: column;
 }
 
 .p p {
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-bottom: 1.5px solid #a4ccae;
-  padding-bottom: 8px;
+  padding-bottom: 15px;
 }
 
 .h2 {
   font-family: 'Abril Fatface', sans-serif;
-  text-align: justify;
+  text-align: center;
   margin-bottom: 10px;
   font-size: 0.9em;
+}
+
+.worldImage {
+  width: 16em;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tableLeft p {
+  font-family: 'Montserrat', sans-serif;
 }
