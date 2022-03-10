@@ -4,7 +4,7 @@ This is a fullstack web app created using all the skills we as a team have attai
 The purpose behind the app is to increase recycling, by getting members 
 
 Inline-style: 
-![alt text](https://drive.google.com/file/d/1-T73E1EJ78xR96Hv7YflMcRRz5jKLrGO/view?usp=sharing "Logo Title Text 1")
+![alt text](public/gif/reloved.gif "Logo Title Text 1")
 
 
 
