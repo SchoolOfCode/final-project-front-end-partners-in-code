@@ -4,7 +4,7 @@ import {
   StarIcon,
   InfoIcon,
   InfoOutlineIcon,
-   SearchIcon,
+  SearchIcon,
   SunIcon,
   EmailIcon,
   ArrowForwardIcon,
@@ -16,14 +16,9 @@ import {
   MenuList,
   MenuItem,
   IconButton,
-  //   MenuItemOption,
-  //   MenuGroup,
-  //   MenuOptionGroup,
-  //   MenuDivider,
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
-import Homepage from '../Homepage/Homepage.js';
 
 export default function NavBar() {
   return (
@@ -49,18 +44,31 @@ export default function NavBar() {
             </MenuItem>
           </Link>
           <Link to="/items">
-          <MenuItem icon={<SearchIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
-            {' '}
-            Browse
-          </MenuItem>
+            <MenuItem
+              icon={<SearchIcon />}
+              _hover={{ bgColor: 'color.mintgreen' }}
+            >
+              {' '}
+              Browse
+            </MenuItem>
           </Link>
-          <MenuItem icon={<InfoIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
-            {' '}
-            Community Guidelines
-          </MenuItem>
-          <MenuItem icon={<SunIcon />} _hover={{ bgColor: 'color.mintgreen' }}>
-            Sustainability
-          </MenuItem>
+          <Link to="/community-guidelines">
+            <MenuItem
+              icon={<InfoIcon />}
+              _hover={{ bgColor: 'color.mintgreen' }}
+            >
+              {' '}
+              Community Guidelines
+            </MenuItem>
+          </Link>
+          <Link to="/sustainability">
+            <MenuItem
+              icon={<SunIcon />}
+              _hover={{ bgColor: 'color.mintgreen' }}
+            >
+              Sustainability
+            </MenuItem>
+          </Link>
           <MenuItem
             icon={<EmailIcon />}
             _hover={{ bgColor: 'color.mintgreen' }}
