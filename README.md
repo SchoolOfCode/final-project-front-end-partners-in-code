@@ -3,7 +3,7 @@
 This is a fullstack web app created using all the skills we as a team have attained throughout our time at the School of Code.
 The purpose behind the app is to increase recycling, by getting members 
 
-![demo](public/gif/reloved.gif "reloved demo"  width="150px" height="150px")
+![demo](public/gif/reloved.gif "reloved demo" )
 
 ## Table of Contents
 
