@@ -95,6 +95,26 @@
   min-width: 375px;
 }
 
+.p p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  margin-bottom: 10px;
+
+  padding-bottom: 8px;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid;
+  padding: 1.7em 1.7em 1em 1.7em;
+  box-shadow: 5px 5px #888888;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
 .team {
   font-size: 2.5rem;
   margin-bottom: 0%;

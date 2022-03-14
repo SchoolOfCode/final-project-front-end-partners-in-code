@@ -36,6 +36,18 @@ export default function AboutUsDisplay() {
       <div className={css.browse}>
         <H1 text="About Us" />
       </div>
+      <div className={css.background}>
+        <div className={css.p}>
+          <p>
+            We live in a throwaway society, which adds a great deal of burden to
+            the environment. Additionally, the current situation world wide is
+            leaving a lot of people in need of help, even for the most basic
+            things like clothing.<br></br>
+            <br></br> In light of this, Reloved is a platform that has been
+            created to aid sustainability and help local communities in the UK.
+          </p>
+        </div>
+      </div>
       <div className={css.team}>
         <H2 text="Our Founders" />
       </div>
