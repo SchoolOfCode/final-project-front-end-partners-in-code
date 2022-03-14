@@ -41,6 +41,7 @@ export default function AddItemPopUp({ onAddNewItem }) {
   const handleEmailChange = (event) => setEmail(event.target.value);
   const handleDescriptionChange = (event) =>
     setProductDescription(event.target.value);
+ 
 
   //DROPBOX
   const [url, setUrl] = useState('');
@@ -213,7 +214,8 @@ export default function AddItemPopUp({ onAddNewItem }) {
                       fontFamily="font.body"
                       fontWeight="400"
                     />
-                  </FormControl>
+                    </FormControl>
+                 
                   {/* product description input */}
                   <FormControl mt={4}>
                     <FormLabel fontFamily="font.body">Description</FormLabel>

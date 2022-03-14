@@ -36,10 +36,10 @@ export default function ContactPage() {
               <h3>Location</h3>
               <p>{from.location}</p>
             </div>
-            <div className={css.phone}>
+            {/* <div className={css.phone}>
               <h3>Phone Number</h3>
               <p>{from.phone_number}</p>
-            </div>
+            </div> */}
             <div className={css.email}>
               <h3>E-mail</h3>
               <p>{from.email_address}</p>
