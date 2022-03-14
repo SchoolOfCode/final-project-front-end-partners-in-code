@@ -16,14 +16,14 @@
 
 @media screen and (max-height: 1700px) {
   .contactContainer {
-    padding-bottom: 50em;
+    padding-bottom: 60em;
   }
 }
 /* Back to Browser Link */
 .backButton {
   font-family: 'Abril Fatface', sans-serif;
   font-size: 1.3em;
-  margin-left: 20vw;
+  margin-left: 15vw;
   padding-top: 3vw;
 }
 /* On Hover Back to Browser becomes green */
@@ -36,8 +36,8 @@
   border: 1px solid;
   padding: 1.7em 1.7em 1em 1.7em;
   box-shadow: 5px 5px #888888;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
   display: flex;
   justify-content: center;
 }
@@ -102,20 +102,24 @@
 
 .image img {
   width: 18vw;
-  min-width: 300px;
-  max-width: 300px;
-  max-height: 55vh;
+  min-width: 150px;
+  max-width: 190px;
+  max-height: 35vh;
   /* min-height: 55vh; */
   padding: none;
   margin: 10px 0 10px 0;
 }
 
-p {
+.title,
+.location,
+.phone,
+.email,
+.description h3 {
   font-family: 'Abril Fatface', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
 }
 
-h3 {
+p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 15px;

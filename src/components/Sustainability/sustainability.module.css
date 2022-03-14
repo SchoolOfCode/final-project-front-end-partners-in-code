@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
+
+/* Whole page items and background image */
+.displayContainer {
+  width: auto;
+  background-repeat: no-repeat;
+  background: url(https://images.unsplash.com/photo-1612538946893-033c6bb7060c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 30px;
+}
+
+/* Logo and sign up and log in buttons */
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logoItem {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo {
+  position: relative;
+  width: 20vw;
+  max-width: 170px;
+  min-width: 100px;
+  margin-left: 3%;
+  padding-bottom: 5px;
+}
+
+/* AUTHENTICATION BUTTONS */
+.logInButton,
+.signUpButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.logInButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2px;
+}
+
+.logInButton:hover {
+  text-decoration: underline;
+}
+
+.signUpButton {
+  border-radius: 50px;
+  width: 100px;
+  height: 38px;
+  border: solid 1px #e6998d;
+  display: flex;
+  justify-content: center;
+}
+
+.signUpButton:hover {
+  background-color: #e6998d;
+}
+
+.pinkButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+/* navBar position */
+.navBar {
+  margin-left: 15px;
+}
+
+/* H1 about the Browse.... test */
+.browse {
+  text-align: center;
+  font-size: 3rem;
+  color: #e6998d;
+  text-shadow: 2px 2px #37332f;
+  font-weight: 900;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  font-family: 'Abril Fatface', cursive;
+  margin-bottom: 2%;
+  letter-spacing: 4px;
+  min-width: 375px;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid;
+  padding: 1.7em 1.7em 1em 1.7em;
+  box-shadow: 5px 5px #64847c;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  display: flex;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+/* Div within the whole of the white box (.background) */
+.headingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* container for H2 Contact Information */
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify;
+  flex-direction: column;
+}
+
+.p p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  margin-bottom: 15px;
+  border-bottom: 1.5px solid #a4ccae;
+  padding-bottom: 15px;
+}
+
+.h2 {
+  font-family: 'Abril Fatface', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.worldImage {
+  width: 16em;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tableLeft p {
+  font-family: 'Montserrat', sans-serif;
+}

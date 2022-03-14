@@ -1,10 +1,12 @@
 import Homepage from '../Homepage/Homepage.js';
 import ContactPage from '../ContactPage/ContactPage';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import ItemsDisplay from '../ItemsDisplay/ItemsDisplay.js';
 import items from '../../libs/items.js';
 import AboutUsDisplay from '../AboutUsDisplay/AboutUsDisplay.js';
+import CommunityGuide from '../CommunityGuide/CommunityGuide.js';
+import Sustainability from '../Sustainability/Sustainability.js';
 
 function App() {
   //this state keeps whole array of items
@@ -41,10 +43,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/community-guidelines" element={<CommunityGuide />} />
+        <Route path="/sustainability" element={<Sustainability />} />
         <Route
           path="/items"
           element={
-            <ItemsDisplay items={updatedListItems.reverse()} onAddNewItem={handleClick} />
+            <ItemsDisplay
+              items={updatedListItems.reverse()}
+              onAddNewItem={handleClick}
+            />
           }
         />
         <Route path="/about-us" element={<AboutUsDisplay />} />

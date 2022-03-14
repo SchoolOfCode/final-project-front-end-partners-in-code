@@ -33,7 +33,7 @@ const aboutUs = [
   {
     id: 4,
     image: {
-      img: './profile-images/luna.png',
+      img: "./profile-images/luna.png",
       alt: "Luna's profile picture",
     },
     name: 'Luna Yu',
